@@ -93,6 +93,10 @@ body {
   width: 100px;
 }
 
+.cart-icon {
+  width: 22px;
+}
+
 .navbar {
   display: none;
   width: 400px;
