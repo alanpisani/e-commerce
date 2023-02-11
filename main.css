@@ -236,6 +236,9 @@ body {
   color: hsl(219deg, 9%, 45%);
   text-decoration: line-through;
 }
+.details__button {
+  background-color: hsl(26deg, 100%, 55%);
+}
 
 .input {
   height: 57px;
