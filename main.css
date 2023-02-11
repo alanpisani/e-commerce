@@ -232,6 +232,11 @@ body {
   padding: 4px;
   border: 4px;
 }
+.details__before {
+  font-weight: 700;
+  color: hsl(219deg, 9%, 45%);
+  text-decoration: line-through;
+}
 
 .main-container {
   position: relative;
