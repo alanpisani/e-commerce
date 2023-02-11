@@ -4,5 +4,7 @@
 .input{
     border:1px solid red;
     height:57px;
-    
+    &__minus,&__plus{
+        width:20px;
+    }
 }

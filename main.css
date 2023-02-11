@@ -241,6 +241,9 @@ body {
   border: 1px solid red;
   height: 57px;
 }
+.input__minus, .input__plus {
+  width: 20px;
+}
 
 .main-container {
   position: relative;
