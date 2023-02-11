@@ -7,9 +7,6 @@
     display:flex;
     justify-content: space-between;
     &__minus,&__plus{
-        width:25px;
-        border:1px solid;
-        height:100%;
-        padding: 5px 4px;
+        @include mixins.changeNumber(5px, 4px);
     }
 }
