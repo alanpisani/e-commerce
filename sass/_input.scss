@@ -1,10 +1,15 @@
-@use 'variables';
+@use 'variables' as v;
 @use 'mixins';
 
 .input{
     border:1px solid red;
     height:57px;
+    display:flex;
+    justify-content: space-between;
     &__minus,&__plus{
-        width:20px;
+        width:25px;
+        border:1px solid;
+        height:100%;
+        padding: 5px 4px;
     }
 }
