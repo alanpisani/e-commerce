@@ -259,6 +259,7 @@ body {
   font-weight: 700;
   font-family: "Kumbh Sans", sans-serif;
   text-align: center;
+  outline: none;
 }
 
 .main-container {
