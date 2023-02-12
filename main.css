@@ -393,6 +393,9 @@ body {
   opacity: 0.5;
 }
 
+.modal-gallery {
+  width: 600px;
+}
 .modal-gallery__background {
   background-color: hsla(0deg, 0%, 0%, 0.5);
   position: absolute;
@@ -401,25 +404,34 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
+  display: grid;
+  place-content: center;
+}
+.modal-gallery__close-container {
+  text-align: right;
+  height: 30px;
 }
 .modal-gallery__close {
   width: 16px;
 }
 .modal-gallery__close:hover {
   cursor: pointer;
+  content: url(../imagenes/icon-close-orange.svg);
 }
 .modal-gallery__image-container {
   background-image: url(../imagenes/mate-calavera-negra/calavera-1.jfif);
   background-size: cover;
   height: 446px;
-  width: 446px;
-  background-position-y: -135px;
+  background-position-y: -250px;
   border-radius: 16px;
   margin-bottom: 32px;
+  position: relative;
 }
 .modal-gallery__thumnails {
   display: flex;
   justify-content: space-between;
+  width: 450px;
+  margin: auto;
 }
 .modal-gallery__thumnail {
   width: 90px;
@@ -452,7 +464,7 @@ body {
   border-radius: 50%;
   position: absolute;
   top: 190px;
-  left: 420px;
+  left: 575px;
 }
 .modal-gallery__next:hover {
   cursor: pointer;
