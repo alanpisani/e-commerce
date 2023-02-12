@@ -300,8 +300,13 @@ body {
   padding: 24px;
   border-bottom: 1px solid hsl(220deg, 14%, 75%);
 }
-
-.cart-product-thumnail {
+.cart-modal__details-container {
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.cart-modal__image {
   width: 150px;
   height: 140px;
 }
