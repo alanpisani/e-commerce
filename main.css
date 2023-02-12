@@ -253,6 +253,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 16px;
+  transition: 0.2s;
+}
+.details__button:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .input {

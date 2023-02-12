@@ -44,4 +44,9 @@
     align-items: center;
     justify-content: center;
     gap:16px;
+    transition:0.2s;
+    &:hover{
+        cursor:pointer;
+        opacity: 0.5;
+    }
 }
