@@ -478,7 +478,6 @@ body {
 .main-container {
   position: relative;
   width: 375px;
-  border: 1px solid black;
   margin: auto;
 }
 @media (min-width: 1115px) {
