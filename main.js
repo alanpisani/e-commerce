@@ -25,6 +25,7 @@ minusBtn.addEventListener("click", () => {
 
 const addToCartBtn = document.querySelector('.details__button');
 let cartNotification = document.querySelector('.header__cart--notification');
+let lastValue = parseInt(cartNotification.innerText);
 
 addToCartBtn.addEventListener('click', ()=>{
 
@@ -33,16 +34,45 @@ addToCartBtn.addEventListener('click', ()=>{
 
     cartNotification.innerText = lastValue;
     cartNotification.style.display = "block";
+    priceModal.innerHTML = `$2000 x ${lastValue} <span>$${lastValue*2000}</span>`;
 });
 
 //Mostrar el modal con el detalle del carrito
 
 const cartIconBtn = document.querySelector(".header__cart");
 const cartModal = document.querySelector(".cart-modal");
+let priceModal = document.querySelector('.cart-modal__price');
+const productContainer = document.querySelector('.cart-modal__checkout-container');
 
 cartIconBtn.addEventListener('click', ()=>{
 
-    cartModal.style.display = "block";
+    cartModal.classList.toggle('show');
+
+    if (cartModal == 0){
+        productContainer.innerHTML = `
+        <div class="cart-modal__checkout-container">
+                <div class="cart-modal__details-container">
+                    <img class="cart-modal__image" src="/imagenes/mate-calavera-negra/calavera-1.jfif" alt="cart product thumnail">
+                    <div>
+                        <p class="cart-modal__product">Mate calavera negra</p>
+                        <p class="cart-modal__price">$2000 x 3 <span>$6000</span></p>
+                    </div>
+                    <img class="cart-modal__delete" src="imagenes/delete-icon.svg" alt="delete">
+                </div>
+                <button class="cart-modal__checkout">Checkout</button>`
+    }
+    //priceModal.innerHTML = `$2000 x ${lastValue} <span>$${lastValue*2000}</span>`;
+})
+
+//Borrar el contenido del carrito
+
+const deleteProductBtn = document.querySelector('.cart-modal__delete');
+
+deleteProductBtn.addEventListener('click', ()=>{
+
+    productContainer.innerHTML = '<p class="cart-empty">Tu carrito está vacío</p>';
+    lastValue = 0;
+    cartNotification.innerText = lastValue;
 })
 
 
