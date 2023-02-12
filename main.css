@@ -295,6 +295,11 @@ body {
   background-color: hsl(0deg, 0%, 100%);
   right: 6px;
 }
+.cart-modal__title {
+  font-weight: 700;
+  padding: 24px;
+  border-bottom: 1px solid hsl(220deg, 14%, 75%);
+}
 
 .cart-product-thumnail {
   width: 150px;
