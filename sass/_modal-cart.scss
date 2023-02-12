@@ -2,9 +2,17 @@
 @use 'mixins';
 
 .cart-modal{
-    border:1px solid blue;
-
+    //border:1px solid blue;
+    width:360px;
+    height: 260px;
+    border-radius:8px;
+    box-shadow: 3px 3px 18px;
+    position:absolute;
+    top:75px;
+    background-color:v.$White;
+    right:6px;
 }
 .cart-product-thumnail{
-    width:100px;
+    width:150px;
+    height:140px;
 }
