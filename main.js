@@ -5,9 +5,11 @@ let plusBtn = document.querySelector('.input__plus');
 let userInputNumber = 0;
 
 plusBtn.addEventListener('click', ()=>{
-    console.log("se presiono mas");
+    userInputNumber++;
+    console.log(userInputNumber);
 });
 
 minusBtn.addEventListener('click', ()=>{
-    console.log("se presiono menos");
+    userInputNumber--;
+    console.log(userInputNumber);
 });
