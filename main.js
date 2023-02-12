@@ -11,5 +11,9 @@ plusBtn.addEventListener('click', ()=>{
 
 minusBtn.addEventListener('click', ()=>{
     userInputNumber--;
+    if (userInputNumber <= 0){
+        
+        userInputNumber = 0;
+    }
     console.log(userInputNumber);
 });
