@@ -33,6 +33,16 @@ addToCartBtn.addEventListener('click', ()=>{
 
     cartNotification.innerText = lastValue;
     cartNotification.style.display = "block";
-    
 });
+
+//Mostrar el modal con el detalle del carrito
+
+const cartIconBtn = document.querySelector(".header__cart");
+const cartModal = document.querySelector(".cart-modal");
+
+cartIconBtn.addEventListener('click', ()=>{
+
+    cartModal.style.display = "block";
+})
+
 
