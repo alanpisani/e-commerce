@@ -285,6 +285,10 @@ body {
   outline: none;
 }
 
+.cart-modal {
+  border: 1px solid blue;
+}
+
 .main-container {
   position: relative;
   width: 375px;
