@@ -2,5 +2,43 @@
 @use 'mixins';
 
 .modal-gallery{
-    
+    &__background{
+        @include mixins.modal-background;
+        //border:1px solid blue;
+    }
+    &__close{
+        width:16px;
+        &:hover{
+            cursor:pointer;
+        }
+        
+    &__image-container{
+        background-image: url(../imagenes/mate-calavera-negra/calavera-1.jfif);
+        background-size: cover;
+        height: 446px;
+        width:446px;
+        background-position-y: -135px;
+        border-radius:16px;
+        margin-bottom:32px;
+    }
+    &__thumnails{
+        display:flex;
+        justify-content: space-between;
+        
+    }
+    &__thumnail{
+        width:90px;
+        height:90px;
+        border-radius:16px;
+        &:hover{
+            cursor:pointer;
+            border:2px solid v.$Orange;
+        }
+    }
+    &__previous{
+        @include mixins.image-btn(190px, -15px, true);
+    }
+    &__next{
+        @include mixins.image-btn(190px, 420px, true); 
+    }
 }
