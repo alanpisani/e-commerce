@@ -21,7 +21,7 @@
         padding:24px;
     }
     &__details-container{
-        border:1px solid green;
+        //border:1px solid green;
         display:flex;
         align-items: center;
         margin-bottom:24px;
@@ -43,4 +43,8 @@
             cursor:pointer;
         }
     }
+    &__checkout{
+        @include mixins.button;
+    }
+
 }
