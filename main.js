@@ -23,56 +23,60 @@ minusBtn.addEventListener("click", () => {
 
 //Agregar el total de productos al carrito cuando se presiona el boton AÑADIR AL CARRITO
 
-const addToCartBtn = document.querySelector('.details__button');
-let cartNotification = document.querySelector('.header__cart--notification');
+const addToCartBtn = document.querySelector(".details__button");
+let cartNotification = document.querySelector(".header__cart--notification");
 let lastValue = parseInt(cartNotification.innerText);
 
-addToCartBtn.addEventListener('click', ()=>{
-
-    let lastValue = parseInt(cartNotification.innerText);
-    lastValue = lastValue + userInputNumber;
-
-    cartNotification.innerText = lastValue;
-    cartNotification.style.display = "block";
-    priceModal.innerHTML = `$2000 x ${lastValue} <span>$${lastValue*2000}</span>`;
+addToCartBtn.addEventListener("click", () => {
+  lastValue = lastValue + userInputNumber;
+  cartNotification.innerText = lastValue;
+  cartNotification.style.display = "block";
+  drawProductInModal();
 });
 
 //Mostrar el modal con el detalle del carrito
 
 const cartIconBtn = document.querySelector(".header__cart");
 const cartModal = document.querySelector(".cart-modal");
-let priceModal = document.querySelector('.cart-modal__price');
-const productContainer = document.querySelector('.cart-modal__checkout-container');
+//let priceModal = document.querySelector('.cart-modal__price');
+const productContainer = document.querySelector(
+  ".cart-modal__checkout-container"
+);
 
-cartIconBtn.addEventListener('click', ()=>{
+cartIconBtn.addEventListener("click", () => {
+  cartModal.classList.toggle("show");
 
-    cartModal.classList.toggle('show');
-
-    if (cartModal == 0){
-        productContainer.innerHTML = `
-        <div class="cart-modal__checkout-container">
-                <div class="cart-modal__details-container">
-                    <img class="cart-modal__image" src="/imagenes/mate-calavera-negra/calavera-1.jfif" alt="cart product thumnail">
-                    <div>
-                        <p class="cart-modal__product">Mate calavera negra</p>
-                        <p class="cart-modal__price">$2000 x 3 <span>$6000</span></p>
-                    </div>
-                    <img class="cart-modal__delete" src="imagenes/delete-icon.svg" alt="delete">
-                </div>
-                <button class="cart-modal__checkout">Checkout</button>`
-    }
-    //priceModal.innerHTML = `$2000 x ${lastValue} <span>$${lastValue*2000}</span>`;
-})
+  if (cartModal == 0) {
+    drawProductInModal();
+  }
+});
 
 //Borrar el contenido del carrito
 
-const deleteProductBtn = document.querySelector('.cart-modal__delete');
-
-deleteProductBtn.addEventListener('click', ()=>{
-
-    productContainer.innerHTML = '<p class="cart-empty">Tu carrito está vacío</p>';
+function deleteProduct() {
+  const deleteProductBtn = document.querySelector(".cart-modal__delete");
+  deleteProductBtn.addEventListener("click", () => {
+    productContainer.innerHTML =
+      '<p class="cart-empty">Tu carrito está vacío</p>';
     lastValue = 0;
     cartNotification.innerText = lastValue;
-})
+  });
+}
 
+//FUNCIONES
 
+function drawProductInModal() {
+  productContainer.innerHTML = `
+    <div class="cart-modal__details-container">
+      <img class="cart-modal__image" src="imagenes/mate-calavera-negra/calavera-1.jfif" alt="cart product thumnail">
+      <div>
+        <p class="cart-modal__product">Mate calavera negra</p>
+        <p class="cart-modal__price">$2000 x 3 <span>$6000</span></p>
+      </div>
+      <img class="cart-modal__delete" src="imagenes/delete-icon.svg" alt="delete">
+    </div>
+    <button class="cart-modal__checkout">Checkout</button>`;
+  deleteProduct();
+  let priceModal = document.querySelector(".cart-modal__price");
+  priceModal.innerHTML = `$2000 x ${lastValue} <span>$${lastValue * 2000}</span>`;
+}
