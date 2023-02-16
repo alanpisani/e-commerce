@@ -134,8 +134,20 @@ modalThumbnails.forEach(modalThumbnail =>{
 
 //Cambiar imagen principal de modal desde flechas
 
+const previousModalBtn = document.querySelector('.modal-gallery__previous');
+const nextModalBtn = document.querySelector('.modal-gallery__next');
 
+previousModalBtn.addEventListener('click', ()=>{
 
+  changePreviousImage(modalImageContainer);
+
+});
+
+nextModalBtn.addEventListener('click', ()=>{
+
+  changeNextImage(modalImageContainer);
+
+});
 
 
 
@@ -156,13 +168,11 @@ function drawProductInModal() {
     <button class="cart-modal__checkout">Checkout</button>`;
   deleteProduct();
   let priceModal = document.querySelector(".cart-modal__price");
-  priceModal.innerHTML = `$2000 x ${lastValue} <span>$${
-    lastValue * 2000
-  }</span>`;
+  priceModal.innerHTML = `$2000 x ${lastValue} <span>$${lastValue * 2000}</span>`;
 };
 
 function changeNextImage(imgContainer) {
-  if (imgIndex == 5){
+  if (imgIndex == 4){
     imgIndex = 1;
   }else{
     imgIndex++
@@ -173,9 +183,9 @@ function changeNextImage(imgContainer) {
 
 function changePreviousImage(imgContainer){
   if (imgIndex == 1){
-    imgIndex = 5
+    imgIndex = 4;
   }else{
     imgIndex--;
   }
   imgContainer.style.backgroundImage = `url('../imagenes/mate-calavera-negra/calavera-${imgIndex}.jfif')`;
-}
+};
