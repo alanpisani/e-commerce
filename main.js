@@ -85,11 +85,14 @@ previousGalleryBtn.addEventListener('click', ()=>{
 const imagesModal = document.querySelector('.modal-gallery__background');
 const closeModalBtn = document.querySelector('.modal-gallery__close');
 
-imageContainer.addEventListener('click', ()=>{
-
-  imagesModal.style.display = 'grid';
-
+  imageContainer.addEventListener('click', ()=>{
+    if(window.innerWidth >= 1115){
+        imagesModal.style.display = 'grid';
+    }
+    
 });
+
+
 
 closeModalBtn.addEventListener('click', ()=>{
 
@@ -150,7 +153,22 @@ nextModalBtn.addEventListener('click', ()=>{
 });
 
 
+//Mostrar el navbar version celular clickeando la hamburguesa
 
+const hamburgerMenu = document.querySelector('.header__menu');
+const modalNavbar = document.querySelector('.modal-navbar__background');
+const closeModalNavbar = document.querySelector('.modal-navbar__close-icon');
+
+//modalNavbar.style.display = 'none';
+
+hamburgerMenu.addEventListener('click', ()=>{
+  console.log('abrir modal');
+  modalNavbar.style.display = 'block';
+});
+
+closeModalNavbar.addEventListener('click', ()=>{
+  modalNavbar.style.display = 'none';
+});
 
 
 //FUNCIONES
