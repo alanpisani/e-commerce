@@ -39,16 +39,17 @@ addToCartBtn.addEventListener("click", () => {
 const cartIconBtn = document.querySelector(".header__cart");
 const cartModal = document.querySelector(".cart-modal");
 //let priceModal = document.querySelector('.cart-modal__price');
-const productContainer = document.querySelector(
-  ".cart-modal__checkout-container"
-);
+const productContainer = document.querySelector(".cart-modal__checkout-container");
 
 cartIconBtn.addEventListener("click", () => {
   cartModal.classList.toggle("show");
 
-  if (cartModal == 0) {
+  if (lastValue == 0) {
+    productContainer.innerHTML =
+      '<p class="cart-empty">Tu carrito está vacío</p>';
+  }else{
     drawProductInModal();
-  }
+  };
 });
 
 //Borrar el contenido del carrito
@@ -73,6 +74,13 @@ let imgIndex = 1;
 nextGalleryBtn.addEventListener('click', () => {
   changeNextImage(imageContainer);
 });
+
+previousGalleryBtn.addEventListener('click', ()=>{
+  changePreviousImage(imageContainer);
+});
+
+
+//Mostrar el modal de las imagenes cuadno hago click en la imagen principal
 
 //FUNCIONES
 
@@ -103,3 +111,12 @@ function changeNextImage(imgContainer) {
   imgContainer.style.backgroundImage = `url('../imagenes/mate-calavera-negra/calavera-${imgIndex}.jfif')`;
   
 };
+
+function changePreviousImage(imgContainer){
+  if (imgIndex == 1){
+    imgIndex = 5
+  }else{
+    imgIndex--;
+  }
+  imgContainer.style.backgroundImage = `url('../imagenes/mate-calavera-negra/calavera-${imgIndex}.jfif')`;
+}
