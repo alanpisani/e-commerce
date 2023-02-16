@@ -110,7 +110,7 @@ thumbnails.forEach(thumbnail =>{
   thumbnail.addEventListener('click', event=>{
 
     //console.log(event.target.id);
-    imageContainer.style.backgroundImage = `url('../imagenes/mate-calavera-negra/calavera-${event.target.id}.jfif')`;
+    imageContainer.style.backgroundImage = `url('./imagenes/mate-calavera-negra/calavera-${event.target.id}.jfif')`;
 
   });
 
@@ -128,7 +128,7 @@ modalThumbnails.forEach(modalThumbnail =>{
   modalThumbnail.addEventListener('click', event=>{
 
     //console.log(event.target.id.slice(-1));
-    modalImageContainer.style.backgroundImage = `url('../imagenes/mate-calavera-negra/calavera-${event.target.id.slice(-1)}.jfif')`;
+    modalImageContainer.style.backgroundImage = `url('./imagenes/mate-calavera-negra/calavera-${event.target.id.slice(-1)}.jfif')`;
 
   });
 
@@ -195,7 +195,7 @@ function changeNextImage(imgContainer) {
   }else{
     imgIndex++
   };
-  imgContainer.style.backgroundImage = `url('../imagenes/mate-calavera-negra/calavera-${imgIndex}.jfif')`;
+  imgContainer.style.backgroundImage = `url('./imagenes/mate-calavera-negra/calavera-${imgIndex}.jfif')`;
   
 };
 
@@ -205,5 +205,5 @@ function changePreviousImage(imgContainer){
   }else{
     imgIndex--;
   }
-  imgContainer.style.backgroundImage = `url('../imagenes/mate-calavera-negra/calavera-${imgIndex}.jfif')`;
+  imgContainer.style.backgroundImage = `url('./imagenes/mate-calavera-negra/calavera-${imgIndex}.jfif')`;
 };
