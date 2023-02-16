@@ -419,10 +419,10 @@ body {
 }
 .modal-gallery__close:hover {
   cursor: pointer;
-  content: url(../imagenes/icon-close-orange.svg);
+  content: url(./imagenes/icon-close-orange.svg);
 }
 .modal-gallery__image-container {
-  background-image: url(../imagenes/mate-calavera-negra/calavera-1.jfif);
+  background-image: url(./imagenes/mate-calavera-negra/calavera-1.jfif);
   background-size: cover;
   height: 446px;
   background-position-y: -250px;
