@@ -10,6 +10,9 @@
         background-image:url('../imagenes/mate-calavera-negra/calavera-1.jfif');
         background-size: cover;
         background-position-y: -135px;
+        &:hover{
+            cursor:pointer;
+        }
     }
     &__previous{
         @include mixins.image-btn(130px, 15px, false);
