@@ -80,7 +80,7 @@ previousGalleryBtn.addEventListener('click', ()=>{
 });
 
 
-//Mostrar el modal de las imagenes cuadno hago click en la imagen principal
+//Mostrar el modal de las imagenes cuando hago click en la imagen principal
 
 const imagesModal = document.querySelector('.modal-gallery__background');
 const closeModalBtn = document.querySelector('.modal-gallery__close');
@@ -96,6 +96,49 @@ closeModalBtn.addEventListener('click', ()=>{
   imagesModal.style.display = 'none';
 
 });
+
+//Cambiar las imagenes principales desde los thumnails
+
+let thumbnails = document.querySelectorAll ('.gallery__thumnail');
+thumbnails = [...thumbnails]; //Transforma nodeList en arrays
+
+thumbnails.forEach(thumbnail =>{
+
+  thumbnail.addEventListener('click', event=>{
+
+    //console.log(event.target.id);
+    imageContainer.style.backgroundImage = `url('../imagenes/mate-calavera-negra/calavera-${event.target.id}.jfif')`;
+
+  });
+
+});
+
+
+//Cambiar las imagenes principales desde los thumnails EN EL MODAL
+
+let modalThumbnails = document.querySelectorAll ('.modal-gallery__thumnail');
+const modalImageContainer = document.querySelector('.modal-gallery__image-container');
+modalThumbnails = [...modalThumbnails]; //Transforma nodeList en arrays
+
+modalThumbnails.forEach(modalThumbnail =>{
+
+  modalThumbnail.addEventListener('click', event=>{
+
+    //console.log(event.target.id.slice(-1));
+    modalImageContainer.style.backgroundImage = `url('../imagenes/mate-calavera-negra/calavera-${event.target.id.slice(-1)}.jfif')`;
+
+  });
+
+});
+
+
+//Cambiar imagen principal de modal desde flechas
+
+
+
+
+
+
 
 
 //FUNCIONES
