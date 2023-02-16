@@ -63,6 +63,16 @@ function deleteProduct() {
   });
 }
 
+//Cambiar imágenes cuando se presione los botones flecha
+
+const imageUrls = [
+  '../imagenes/mate-calavera-negra/calavera-1.jfif',
+  '../imagenes/mate-calavera-negra/calavera-2.jpeg',
+  '../imagenes/mate-calavera-negra/calavera-3.jpeg',
+  '../imagenes/mate-calavera-negra/calavera-4.jfif',
+  '../imagenes/mate-calavera-negra/calavera-5.jfif'
+]
+
 //FUNCIONES
 
 function drawProductInModal() {
