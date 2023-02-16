@@ -65,13 +65,14 @@ function deleteProduct() {
 
 //Cambiar imágenes cuando se presione los botones flecha
 
-const imageUrls = [
-  '../imagenes/mate-calavera-negra/calavera-1.jfif',
-  '../imagenes/mate-calavera-negra/calavera-2.jpeg',
-  '../imagenes/mate-calavera-negra/calavera-3.jpeg',
-  '../imagenes/mate-calavera-negra/calavera-4.jfif',
-  '../imagenes/mate-calavera-negra/calavera-5.jfif'
-]
+const imageContainer = document.querySelector(".gallery__image-container");
+const previousGalleryBtn = document.querySelector(".gallery__previous");
+const nextGalleryBtn = document.querySelector(".gallery__next");
+let imgIndex = 1;
+
+nextGalleryBtn.addEventListener('click', () => {
+  changeNextImage(imageContainer);
+});
 
 //FUNCIONES
 
@@ -88,5 +89,17 @@ function drawProductInModal() {
     <button class="cart-modal__checkout">Checkout</button>`;
   deleteProduct();
   let priceModal = document.querySelector(".cart-modal__price");
-  priceModal.innerHTML = `$2000 x ${lastValue} <span>$${lastValue * 2000}</span>`;
-}
+  priceModal.innerHTML = `$2000 x ${lastValue} <span>$${
+    lastValue * 2000
+  }</span>`;
+};
+
+function changeNextImage(imgContainer) {
+  if (imgIndex == 5){
+    imgIndex = 1;
+  }else{
+    imgIndex++
+  };
+  imgContainer.style.backgroundImage = `url('../imagenes/mate-calavera-negra/calavera-${imgIndex}.jfif')`;
+  
+};
