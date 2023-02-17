@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <title>Coshita 3D || Impresiones 3D</title>
     <style>
@@ -27,22 +29,18 @@
                 <div class="header__logos">
                     <img class="header__logo" src="imagenes/coshita3d.svg" alt="logo 1">
                     <img class="header__logo-2" src="imagenes/calavera.svg" alt="logo 2">
-
-                    
                 </div>
                 <nav class="navbar">
                     <ul class="navbar__items">
-                        <li><a class="navbar__link" href="#">Inicio</a></li>
+                        <li><a class="navbar__link" href="index.html">Inicio</a></li>
                         <li><a class="navbar__link" href="#">Productos</a></li>
                         <li><a class="navbar__link" href="#">Inicio</a></li>
                         <li><a class="navbar__link" href="#">Acerca de</a></li>
                         <li><a class="navbar__link" href="#">Contacto</a></li>
                     </ul>
-    
                 </nav>
-    
             </div>
-            
+
             <!-- Inicio modal navbar -->
             <div class="modal-navbar__background">
                 <nav class="modal-navbar">
@@ -56,6 +54,7 @@
                     </ul>
             </div>
             <!-- Final modal navbar -->
+
             <div class="header__cart-avatar">
                 <div class="header__cart">
                     <div class="header__cart--notification">0</div>
@@ -65,94 +64,70 @@
             </div>
         </header>
 
+
         <section class="content">
-            <article class="gallery">
-                <div class="gallery__image-container">
-                    <img src="imagenes/previous-icon.svg" alt="previous" class="gallery__previous">
-                    <img src="imagenes/next-icon.svg" alt="next" class="gallery__next">
-                </div>
-                <div class="gallery__thumnails">
-                    <img id="1" class="gallery__thumnail" src="imagenes/mate-calavera-negra/calavera-1.jfif"
-                        alt="thumnail">
-                    <img id="2" class="gallery__thumnail" src="imagenes/mate-calavera-negra/calavera-2.jfif"
-                        alt="thumnail">
-                    <img id="3" class="gallery__thumnail" src="imagenes/mate-calavera-negra/calavera-3.jfif"
-                        alt="thumnail">
-                    <img id="4" class="gallery__thumnail" src="imagenes/mate-calavera-negra/calavera-4.jfif"
-                        alt="thumnail">
+            <article class = "carousel-container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./imagenes/fotos-ventas/mates/terror/jason/mate-jason-1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/fotos-ventas/mates/calaveras/plata/calavera-plata-1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imagenes/fotos-ventas/mates/videojuegos/pokemon/eevee/mate-eevee-1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </button>
                 </div>
             </article>
 
-            <article class="details">
-                <h2 class="details__title">Mate calavera negra</h2>
-                <p class="details__description">Excelente mate hecho en impresion 3D de material PLA, pintado a mano y
-                    terminado con laca para su mayor protección</p>
-                <div class="details__prices">
-                    <p class="details__now">$2000 <span class="details__discount">20%</span></p>
-                    <p class="details__before">$2500</p>
-                </div>
-                <div class="details__product-quantity">
-                    <div class="input">
-                        <img class="input__minus" src="imagenes/minus-icon.svg" alt="minus icon">
-                        <input class="input__number" type="text" value="0">
-                        <img class="input__plus" src="imagenes/plus-icon.svg" alt="plus icon">
-                    </div>
-                    <button class="details__button"><img class="cart-icon" src="imagenes/cart-icon-white.svg" alt=""> Añadir al carrito</button>
-                </div>
+            <article class="products-container">
+
+
+                
             </article>
+
         </section>
-
-        <!-- Inicio cart modal -->
-        <div class="cart-modal">
-            <p class="cart-modal__title">Carrito</p>
-            <div class="cart-modal__checkout-container">
-                <div class="cart-modal__details-container">
-                    <img class="cart-modal__image" src="imagenes/mate-calavera-negra/calavera-1.jfif" alt="cart product thumnail">
-                    <div>
-                        <p class="cart-modal__product">Mate calavera negra</p>
-                        <p class="cart-modal__price">$2000 x 3 <span>$6000</span></p>
-                    </div>
-                    <img class="cart-modal__delete" src="imagenes/delete-icon.svg" alt="delete">
-                </div>
-                <button class="cart-modal__checkout">Checkout</button>
-                <!-- <p class="cart-empty">Tu carrito está vacío</p> -->
-            </div>
-        </div>
-        <!-- Fin cart modal -->
-
     </main>
-
-    <!-- Inicio gallery modal -->
-
-    <div class="modal-gallery__background">
-        <article class="modal-gallery">
-            <div class="modal-gallery__close-container">
-                <img src="imagenes/icon-close.svg" alt="icon close" class="modal-gallery__close">
-            </div>
-            <div class="modal-gallery__image-container">
-                <img src="imagenes/previous-icon.svg" alt="previous" class="modal-gallery__previous">
-                <img src="imagenes/next-icon.svg" alt="next" class="modal-gallery__next">
-            </div>
-            <div class="modal-gallery__thumnails">
-                <img id="m1" class="modal-gallery__thumnail" src="imagenes/mate-calavera-negra/calavera-1.jfif"
-                    alt="thumnail">
-                <img id="m2" class="modal-gallery__thumnail" src="imagenes/mate-calavera-negra/calavera-2.jfif"
-                    alt="thumnail">
-                <img id="m3" class="modal-gallery__thumnail" src="imagenes/mate-calavera-negra/calavera-3.jfif"
-                    alt="thumnail">
-                <img id="m4" class="modal-gallery__thumnail" src="imagenes/mate-calavera-negra/calavera-4.jfif"
-                    alt="thumnail">
-            </div>
-        </article>
-    </div>
-
-    <!-- Fin gallery modal -->
-
     <footer class="atribution">
         Probando 1,2,3 probando
 
     </footer>
-    <script src="./main.js"></script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+
+    <script src="./navbar.js"></script>
 
 </body>
 

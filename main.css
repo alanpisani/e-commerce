@@ -116,6 +116,8 @@ body {
 }
 .navbar__link:hover {
   border-bottom: 4px solid hsl(26deg, 100%, 55%);
+  text-decoration: none;
+  color: hsl(219deg, 9%, 45%);
 }
 @media (min-width: 1115px) {
   .navbar {

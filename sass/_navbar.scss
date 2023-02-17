@@ -18,6 +18,10 @@
         transition: 0.1s;
         &:hover{
             border-bottom:4px solid variables.$Orange;
+            
+            //Por bootstrap
+            text-decoration:none;
+            color:variables.$Dark-grayish-blue;
         }
     }
     @media (min-width: 1115px){
