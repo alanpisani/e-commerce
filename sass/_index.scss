@@ -1,0 +1,15 @@
+@use 'variables' as v;
+
+.products-container{
+    border:1px solid red;
+    padding:30px;
+    &__principal-title{
+        //border:1px solid blue;
+        text-align: center;
+        p{
+            color:v.$Orange;
+            font-size: 1.5em;
+            font-weight: 700; 
+        }
+    }
+}

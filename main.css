@@ -480,6 +480,19 @@ body {
   }
 }
 
+.products-container {
+  border: 1px solid red;
+  padding: 30px;
+}
+.products-container__principal-title {
+  text-align: center;
+}
+.products-container__principal-title p {
+  color: hsl(26deg, 100%, 55%);
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
 .main-container {
   position: relative;
   width: 375px;
