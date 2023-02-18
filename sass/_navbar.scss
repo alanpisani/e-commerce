@@ -11,17 +11,17 @@
     }
     &__link{
         text-decoration: none;
-        color:variables.$Dark-grayish-blue;
+        color:variables.$Pale-orange;
         display: block;
         height: 112px;
         padding-top:42px;
         transition: 0.1s;
         &:hover{
-            border-bottom:4px solid variables.$Orange;
+            border-bottom:4px solid variables.$Coshita;
             
             //Por bootstrap
             text-decoration:none;
-            color:variables.$Dark-grayish-blue;
+            color:variables.$Coshita;
         }
     }
     @media (min-width: 1115px){

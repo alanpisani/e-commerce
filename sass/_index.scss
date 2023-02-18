@@ -1,15 +1,81 @@
 @use 'variables' as v;
+@use 'mixins';
+
+
+
+.carousel-container{
+    box-shadow: 3px 3px 18px;
+}
+.carousel-control-prev, .carousel-control-next{
+    z-index:0;
+}
+.carousel-inner{
+    //border:1px solid red;
+    @media (min-width: 1115px){
+        height:800px;
+    }
+    
+}
 
 .products-container{
-    border:1px solid red;
-    padding:30px;
+    //padding:30px;
     &__principal-title{
         //border:1px solid blue;
         text-align: center;
+        margin-top:60px;
+        margin-bottom:60px;
         p{
-            color:v.$Orange;
-            font-size: 1.5em;
-            font-weight: 700; 
+            color:v.$Coshita;
+            font-size: 2em;
+            font-weight: 700;
+            text-shadow: 3px 3px 18px; 
         }
     }
+    &__just-products{
+        // //padding:30px;
+        display:grid;
+        justify-content: space-between;
+        //gap:45px;
+        margin-bottom:50px;
+        //border:1px solid v.$Coshita;
+        @media (min-width: 1115px){
+
+            grid-template-columns: 350px 350px 350px;
+            //grid-template-rows: 300px 50px;
+        } 
+    }
+    &__product-container{
+        background-color:v.$Pale-orange;
+        border:2px solid v.$Coshita;
+        box-shadow: 3px 3px 18px;
+        border-radius: 16px;
+    }
+    &__title{
+        text-transform: uppercase;
+        margin-top:15px;
+        color:v.$Coshita;
+        font-size:1.3em;
+        font-weight: 550;
+        text-align: center;
+    }
+    &__product-image{
+        width:100%;
+        padding:30px;
+        transition:0.7s;
+        &:hover{
+            padding:20px;
+        }
+    }
+    &__all-products-btn{
+        @include mixins.button;
+        &:hover{
+            text-decoration: none;
+            color:v.$Pale-orange;
+        }
+        @media (min-width:1115px){
+            width:300px;
+            margin:0 auto;
+        }
+    }
+    
 }

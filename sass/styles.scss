@@ -10,6 +10,13 @@
 @use 'modal-gallery';
 @use 'index';
 
+
+body{
+
+    background-image: url('./imagenes/background.png');
+    background-size: 50%;
+
+}
 .main-container{
     position:relative;
     width:375px;

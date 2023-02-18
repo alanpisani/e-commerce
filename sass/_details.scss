@@ -7,10 +7,12 @@
     &__title{
         font-size:1.7em;
         margin-bottom:16px;
+        color:v.$Pale-orange;
+        text-align: center;
     }
     &__description{
         font-size:0.94em;
-        color: v.$Dark-grayish-blue;
+        color: v.$Pale-orange;
         line-height:24px;
         margin-bottom:12px;
     }
@@ -25,6 +27,7 @@
         font-size:1.8em;
         font-weight:700;
         //border:1px solid blue;
+        color:v.$Pale-orange;
         display:flex;
         align-items: center;
         gap:18px;
@@ -32,8 +35,8 @@
     }
     &__discount{
         font-size:0.5em;
-        background-color:v.$Pale-orange;
-        color:v.$Orange;
+        background-color:v.$Very-vark-blue;
+        color:v.$Coshita;
         padding:4px;
         border:4px;
     }
