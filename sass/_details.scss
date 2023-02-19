@@ -8,7 +8,9 @@
         font-size:1.7em;
         margin-bottom:16px;
         color:v.$Pale-orange;
+        border-radius:16px;
         text-align: center;
+        padding:5px;
     }
     &__description{
         font-size:0.94em;
@@ -37,6 +39,7 @@
         font-size:0.5em;
         background-color:v.$Very-vark-blue;
         color:v.$Coshita;
+        border-radius:16px;
         padding:4px;
         border:4px;
     }

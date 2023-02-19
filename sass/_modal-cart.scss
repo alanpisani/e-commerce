@@ -10,9 +10,13 @@
     box-shadow: 3px 3px 18px;
     position:absolute;
     z-index:2;
-    top:75px;
+    top:-20px;
     background-color:v.$White;
-    right:6px;
+    right:10px;
+    @media(min-width:1115px){
+        right:-260px;
+        top:-40px;
+    }
     &__title{
         font-weight: 700;
         padding:24px;

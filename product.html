@@ -20,10 +20,49 @@
 </head>
 
 <body>
+    <header class="header">
+        <div class="header__navegation">
+            <img class="header__menu" src="imagenes/menu-icon-white.svg" alt="menu icon">
+            <div class="header__logos">
+                <img class="header__logo" src="imagenes/coshita3d.svg" alt="logo 1">
+                <img class="header__logo-2" src="imagenes/calavera-blanca.svg" alt="logo 2">
+            </div>
+            <nav class="navbar">
+                <ul class="navbar__items">
+                    <li><a class="navbar__link" href="index.html">Inicio</a></li>
+                    <li><a class="navbar__link" href="#">Productos</a></li>
+                    <li><a class="navbar__link" href="#">Inicio</a></li>
+                    <li><a class="navbar__link" href="#">Quienes somos</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Inicio modal navbar -->
+        <div class="modal-navbar__background">
+            <nav class="modal-navbar">
+                <img class="modal-navbar__close-icon" src="imagenes/icon-close.svg" alt="close icon">
+                <ul class="modal-navbar__items">
+                    <li><a class="modal-navbar__link" href="index.html">Inicio</a></li>
+                    <li><a class="modal-navbar__link" href="#">Productos</a></li>
+                    <li><a class="modal-navbar__link" href="#">Inicio</a></li>
+                    <li><a class="modal-navbar__link" href="#">Acerca de</a></li>
+                </ul>
+        </div>
+        <!-- Final modal navbar -->
+
+        <div class="header__cart-avatar">
+            <div class="header__cart">
+                <div class="header__cart--notification">0</div>
+                <img class="cart-icon" src="imagenes/cart-icon-white.svg" alt="cart icon">
+            </div>
+            <img class="header__avatar" src="imagenes/foto-perfil.jpeg" alt="foto de perfil">
+        </div>
+    </header>
+    
     <main class="main-container">
-        <header class="header">
+        <!-- <header class="header">
             <div class="header__navegation">
-                <img class="header__menu" src="imagenes/menu-icon.svg" alt="menu icon">
+                <img class="header__menu" src="imagenes/menu-icon-white.svg" alt="menu icon">
                 <div class="header__logos">
                     <img class="header__logo" src="imagenes/coshita3d.svg" alt="logo 1">
                     <img class="header__logo-2" src="imagenes/calavera-blanca.svg" alt="logo 2">
@@ -36,12 +75,9 @@
                         <li><a class="navbar__link" href="#">Productos</a></li>
                         <li><a class="navbar__link" href="#">Inicio</a></li>
                         <li><a class="navbar__link" href="#">Quienes somos</a></li>
-                        <!-- <li><a class="navbar__link" href="#">Contacto</a></li> -->
                     </ul>
-    
                 </nav>
-    
-            </div>
+            </div> -->
             
             <!-- Inicio modal navbar -->
             <div class="modal-navbar__background">
@@ -52,18 +88,18 @@
                         <li><a class="modal-navbar__link" href="#">Productos</a></li>
                         <li><a class="modal-navbar__link" href="#">Inicio</a></li>
                         <li><a class="modal-navbar__link" href="#">Acerca de</a></li>
-                        <!-- <li><a class="modal-navbar__link" href="#">Contacto</a></li> -->
                     </ul>
             </div>
             <!-- Final modal navbar -->
-            <div class="header__cart-avatar">
+
+            <!-- <div class="header__cart-avatar">
                 <div class="header__cart">
                     <div class="header__cart--notification">0</div>
                     <img class="cart-icon" src="imagenes/cart-icon-white.svg" alt="cart icon">
                 </div>
                 <img class="header__avatar" src="imagenes/foto-perfil.jpeg" alt="foto de perfil">
             </div>
-        </header>
+        </header> -->
 
         <section class="content">
             <article class="gallery">
@@ -130,8 +166,8 @@
                 <img src="imagenes/icon-close.svg" alt="icon close" class="modal-gallery__close">
             </div>
             <div class="modal-gallery__image-container">
-                <img src="imagenes/previous-icon.svg" alt="previous" class="modal-gallery__previous">
-                <img src="imagenes/next-icon.svg" alt="next" class="modal-gallery__next">
+                <img src="imagenes/previous-icon-white.svg" alt="previous" class="modal-gallery__previous">
+                <img src="imagenes/next-icon-white.svg" alt="next" class="modal-gallery__next">
             </div>
             <div class="modal-gallery__thumnails">
                 <img id="m1" class="modal-gallery__thumnail" src="imagenes/mate-calavera-negra/calavera-1.jfif"

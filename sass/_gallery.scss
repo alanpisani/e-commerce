@@ -15,10 +15,10 @@
         }
     }
     &__previous{
-        @include mixins.image-btn(130px, 15px, false);
+        @include mixins.image-btn(175px, 15px, false);
     }
     &__next{
-        @include mixins.image-btn(130px, 320px, false);
+        @include mixins.image-btn(175px, 320px, false);
     }
     &__thumnails{
         display:none;
@@ -30,6 +30,7 @@
     &__thumnail{
         width:90px;
         height:90px;
+        border:1px solid v.$Orange; 
         border-radius:16px;
         &:hover{
             cursor:pointer;
@@ -43,6 +44,7 @@
             width: 446px;
             height:446px;
             margin-bottom:32px;
+            border:1px solid v.$Orange;
             //background-position: 0;
         }
     }
