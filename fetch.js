@@ -207,15 +207,17 @@ function cargarProductos(productosElegidos){
         const div = document.createElement("div");
         div.classList.add('principal-products__product-container');
         div.innerHTML = `
-        <img class="principal-products__product-image" src="${producto.imagen}" alt="${producto.titulo}">
-        <div class="principal-products__product-details">
-            <h3 class="principal-products__product-title">${producto.titulo}</h3>
-            <p class="principal-products__price">$${producto.precio}</p>
-            <button class="products-container__all-products-btn" id = "${producto.id}">Añadir al carrito</button>
-        </div>`;
+            <img class="principal-products__product-image" src="${producto.imagen}" alt="${producto.titulo}">
+            <div class="principal-products__product-details">
+                <h3 class="principal-products__product-title">${producto.titulo}</h3>
+                <p class="principal-products__price">$${producto.precio}</p>
+                <button class="products-container__all-products-btn" id = "${producto.id}">Añadir al carrito</button>
+            </div>`;
+            
         contenedorProductos.append(div);
     });
 }
+
 cargarProductos(productosArray);
 
 botonesCategoria.forEach(boton => {
@@ -229,7 +231,8 @@ botonesCategoria.forEach(boton => {
 
             const productosBoton = productosArray.filter(producto => producto.categoria.id === e.currentTarget.id);
             cargarProductos(productosBoton);
-        }else{
+        }
+        else{
             tituloCategoria.innerText = "todos los productos";
             cargarProductos(productosArray);
         };
