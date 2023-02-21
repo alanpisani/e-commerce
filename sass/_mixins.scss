@@ -58,3 +58,20 @@
         opacity: 0.5;
     } 
 }
+@mixin clear{
+    background-color: v.$Grayish-alan;
+    width:9rem;
+    height: 57px;
+    border-radius:8px;
+    border:none;
+    color:v.$Coshita;
+    font-size:0.9em;
+    font-weight: 700;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:16px;
+    transition:0.2s;
+    text-transform: uppercase;
+    
+}
