@@ -68,7 +68,7 @@ const productosArray = [
             nombre: "Mates",
             id: "mates"
         },
-        precio: 1800
+        precio: 2000
     },
     {
         id: "mate-05",
@@ -108,7 +108,7 @@ const productosArray = [
             nombre: "Mates",
             id: "mates"
         },
-        precio: 1600
+        precio: 1700
     },
     {
         id: "mate-09",
@@ -118,7 +118,7 @@ const productosArray = [
             nombre: "Mates",
             id: "mates"
         },
-        precio: 2000
+        precio: 2300
     },
     {
         id: "mate-10",
@@ -200,6 +200,9 @@ const productosArray = [
 const contenedorProductos = document.querySelector('.principal-products__products-container');
 const botonesCategoria = document.querySelectorAll('.aside-nav__category-button');
 const tituloCategoria = document.querySelector('#product-title');
+let botonesAgregar = document.querySelectorAll('.products-container__all-products-btn');
+const numerito = document.querySelector('#numerito');
+
 
 function cargarProductos(productosElegidos){
     contenedorProductos.innerHTML = "";
@@ -216,7 +219,9 @@ function cargarProductos(productosElegidos){
             
         contenedorProductos.append(div);
     });
-}
+    actualizarFuncionesAgregar();
+    //console.log(botonesAgregar);
+};
 
 cargarProductos(productosArray);
 
@@ -242,4 +247,46 @@ botonesCategoria.forEach(boton => {
     } );
 
 
-})
+});
+
+function actualizarFuncionesAgregar (){
+    botonesAgregar = document.querySelectorAll('.products-container__all-products-btn');
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener("click", agregarAlCarrito);
+    });
+};
+
+let productosEnCarrito;
+
+const productosEnCarritoLocalStorage = localStorage.getItem("productos-en-carrito");
+
+if (productosEnCarritoLocalStorage){
+    productosEnCarrito = JSON.parse(productosEnCarritoLocalStorage);
+    actualizarNumerito();
+}else{
+    productosEnCarrito = [];
+}
+
+
+function agregarAlCarrito(e){
+    const idBoton = e.currentTarget.id;
+    const productoAgregado = productosArray.find(producto => producto.id === idBoton);
+
+    if (productosEnCarrito.some(producto => producto.id === idBoton)){
+        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+        productosEnCarrito[index].cantidad++;
+        //productoAgregado.cantidad++;
+    }else{
+        productoAgregado.cantidad = 1;
+        productosEnCarrito.push(productoAgregado);
+    }
+    
+    actualizarNumerito();
+    //console.log(productosEnCarrito);
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+};
+
+function actualizarNumerito(){
+    let nuevoNumerito = productosEnCarrito.reduce((acc,producto) => acc + producto.cantidad, 0);
+    numerito.innerText = nuevoNumerito;
+};

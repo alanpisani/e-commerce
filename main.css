@@ -769,8 +769,7 @@ aside {
   gap: 1.5rem;
 }
 .principal-cart-products__empty-cart {
-  color: hsl(25deg, 100%, 94%);
-  display: none;
+  color: hsl(346deg, 93%, 54%);
 }
 .principal-cart-products__cart-products {
   display: flex;
@@ -789,6 +788,9 @@ aside {
 }
 .principal-cart-products__cart-product small {
   font-size: 0.75rem;
+}
+.principal-cart-products__cart-product-title {
+  width: 20rem;
 }
 .principal-cart-products__cart-image {
   width: 4rem;

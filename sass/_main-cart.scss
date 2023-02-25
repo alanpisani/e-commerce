@@ -15,8 +15,8 @@
         gap:1.5rem;
     }
     &__empty-cart{
-        color:v.$Pale-orange;
-        display:none;
+        color:v.$Coshita;
+        //display:none;
     }
     &__cart-products{
         display:flex;
@@ -36,6 +36,10 @@
             font-size: .75rem;
         }    
     }
+    &__cart-product-title{
+        //border:1px solid red;
+        width:20rem;
+    }
     &__cart-image{
         width:4rem;
         border-radius:1rem;
@@ -49,7 +53,6 @@
         //color:v.$Black;
     }
     
-
 }
 .cart-actions{
     display:flex;
