@@ -60,6 +60,9 @@
     <main class="wrapper">
         <aside>
             <nav class="aside-nav">
+                <button id="close-menu" class="mobile-container__close-menu">
+                    <i class="bi bi-x-circle"></i>
+                </button>
                 <ul class="aside-nav__menu">
                     <li>
                         <button id="all" class="aside-nav__category-button active"><i class="bi bi-hand-index-thumb-fill"></i>Todos los productos</button>
@@ -90,6 +93,14 @@
         
         <article class="principal-products">
             <h2 class="principal-products__title" id="product-title">Todos los productos</h2>
+            <div class="mobile-container-master">
+                <div class="mobile-container">
+                    <button id="open-menu" class="mobile-container__open-menu">
+                        <i class="bi bi-patch-plus"></i>
+                    </button>
+                    <h4 class="mobile-container__title">catalogo</h4>
+                </div>
+            </div>
             <div class="principal-products__products-container">
                 
                 <!-- ESTO SE VA A RELLENAR CON JS -->
@@ -103,8 +114,10 @@
 
     </footer>
 
-    <script src="./navbar.js"></script>
-    <script src="./fetch.js"></script>
+    
+    <script src="/navbar.js"></script>
+    <script src="/fetch.js"></script>
+    <script src="/menu.js"></script>
 
     
 </body>

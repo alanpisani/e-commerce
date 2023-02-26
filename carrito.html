@@ -50,6 +50,9 @@
 
     <main class="wrapper">
         <aside>
+            <button id="close-menu" class="mobile-container__close-menu">
+                <i class="bi bi-x-circle"></i>
+            </button>
             <nav class="aside-nav">
                 <ul class="aside-nav__menu">
                     <li>
@@ -65,12 +68,20 @@
 
         <article class="principal-cart-products">
             <h2 class="principal-cart-products__title">Carrito</h2>
+            <div class="mobile-container-master">
+                <div class="mobile-container">
+                    <button id="open-menu" class="mobile-container__open-menu">
+                        <i class="bi bi-patch-plus"></i>
+                    </button>
+                    <h4 class="mobile-container__title">catalogo</h4>
+                </div>
+            </div>
             <div class="principal-cart-products__cart-container">
                 <p id="carrito-vacio" class="principal-cart-products__empty-cart">Tu carrito está vacío</p>
 
                 <div id ="carrito-productos" class="principal-cart-products__cart-products disabled">
                     
-                    <!-- ESTO SE VA  ARELLENAR CON JS -->
+                    <!-- ESTO SE VA A RELLENAR CON JS -->
 
                 </div>
                 <div id="carrito-acciones" class="cart-actions disabled">
@@ -92,6 +103,8 @@
     </main>
 
     <script src="/carrito.js"></script>
+    <script src="/menu.js"></script>
+    
     
 </body>
 </html>
