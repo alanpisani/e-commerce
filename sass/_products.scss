@@ -33,7 +33,7 @@ aside{
     opacity: 0;
     visibility: hidden;
     transition:.2s;
-    @media (min-width:1700px){
+    @media (min-width:1115px){
         display:flex;
         //border:1px solid red;
         position:sticky;
@@ -145,7 +145,7 @@ aside{
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         padding:3rem;
-        //width:auto;
+        width:auto;
     }
     
     &__title{
@@ -234,7 +234,7 @@ aside{
     margin-bottom: 2rem;
     //border:1px solid red;
     //width:6rem;
-    @media (min-width:1700px){
+    @media (min-width:1115px){
         display:none;
     }
 }
@@ -262,7 +262,7 @@ aside{
         top:0.7rem;
         right:0rem;
         cursor: pointer;
-        @media (min-width:1700px){
+        @media (min-width:1115px){
             display:none;
         }
     }
