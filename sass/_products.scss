@@ -33,7 +33,7 @@ aside{
     opacity: 0;
     visibility: hidden;
     transition:.2s;
-    @media (min-width:1115px){
+    @media (min-width:1700px){
         display:flex;
         //border:1px solid red;
         position:sticky;
@@ -153,12 +153,13 @@ aside{
     &__products-container{
         display:grid;
         grid-template-columns: 1fr 0.3fr;
-        gap:5rem;
+        gap:2rem;
         //border:1px solid blue;
-        @media (min-width:800px){
+        @media (min-width:700px){
             grid-template-columns: 1fr 1fr 1fr;
+            gap:0.5rem;
         }
-        @media (min-width:1115px){
+        @media (min-width:1300px){
             grid-template-columns: repeat(3, 1fr);
             margin-left:5rem;
             gap:5rem;
@@ -220,7 +221,7 @@ aside{
     margin-bottom: 2rem;
     //border:1px solid red;
     //width:6rem;
-    @media (min-width:1115px){
+    @media (min-width:1700px){
         display:none;
     }
 }
@@ -248,7 +249,7 @@ aside{
         top:0.7rem;
         right:0rem;
         cursor: pointer;
-        @media (min-width:1115px){
+        @media (min-width:1700px){
             display:none;
         }
     }
