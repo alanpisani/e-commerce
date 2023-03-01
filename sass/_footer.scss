@@ -9,7 +9,10 @@
     height:7rem;
     align-items: center;
     position: relative;
-    
+    @media (max-width:330px){
+        width:20rem;
+        margin-left:1rem;
+    }
     &__informacion{
         color:v.$Coshita;
     }
@@ -31,4 +34,7 @@
     //border:1px solid red;
     position: sticky;
     bottom:5rem;
+    @media (max-width:330px){
+        margin:0 -20%;
+    }
 }

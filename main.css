@@ -1042,6 +1042,12 @@ aside {
   align-items: center;
   position: relative;
 }
+@media (max-width: 330px) {
+  .footer {
+    width: 20rem;
+    margin-left: 1rem;
+  }
+}
 .footer__informacion {
   color: hsl(346deg, 93%, 54%);
 }
@@ -1060,6 +1066,11 @@ aside {
   float: right;
   position: sticky;
   bottom: 5rem;
+}
+@media (max-width: 330px) {
+  .wsp {
+    margin: 0 -20%;
+  }
 }
 
 body {

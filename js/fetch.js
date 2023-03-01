@@ -150,6 +150,16 @@ const productosArray = [
         },
         precio: 1500
     },
+    {
+        id: "mate-13",
+        titulo: "Mate Groot",
+        imagen: "./imagenes/fotos-ventas/mates/superheroes/groot/mate-01.jpg",
+        categoria: {
+            nombre: "Mates",
+            id: "mates"
+        },
+        precio: 1700
+    },
 
     //TAZAS
     {
@@ -172,29 +182,19 @@ const productosArray = [
             id: "macetas"
         },
         precio: 1500
-    },
-    //LAPICEROS
-    {
-        id: "lapicero-01",
-        titulo: "Lapicero Batman",
-        imagen: "./imagenes/fotos-ventas/lapiceros/batman/lapicero-01.jpg",
-        categoria: {
-            nombre: "Lapiceros",
-            id: "lapiceros"
-        },
-        precio: 1600
-    },
-    //FUNKOS
-    {
-        id: "funko-09",
-        titulo: "Funko Lio Messi",
-        imagen: "./imagenes/fotos-ventas/funkos/futbol/messi/funko-01.jpg",
-        categoria: {
-            nombre: "Funkos",
-            id: "funkos"
-        },
-        precio: 2000
     }
+    //LAPICEROS
+    // {
+    //     id: "lapicero-01",
+    //     titulo: "Lapicero Batman",
+    //     imagen: "./imagenes/fotos-ventas/lapiceros/batman/lapicero-01.jpg",
+    //     categoria: {
+    //         nombre: "Lapiceros",
+    //         id: "lapiceros"
+    //     },
+    //     precio: 1600
+    // },
+    
 ];
 
 const contenedorProductos = document.querySelector('.principal-products__products-container');
