@@ -129,7 +129,7 @@ aside{
 }
 
 .principal-products{
-    border:1px solid green;
+    //border:1px solid green;
     //margin:1rem;
     margin:0 auto;
     //margin-top:1rem;
@@ -166,7 +166,11 @@ aside{
             grid-template-columns: 1fr 1fr;
             gap:0.5rem;
         }
-        @media (min-width:1300px){
+        @media (min-width:1100px){
+            grid-template-columns: 1fr 1fr;
+            gap:6rem;
+        }
+        @media (min-width:1700px){
             grid-template-columns: repeat(3, 1fr);
             margin-left:5rem;
             gap:5rem;
