@@ -2,13 +2,28 @@
 @use 'mixins';
 
 .principal-cart-products{
-    margin:1rem;
-    margin-left:-1.2rem;
+    width:22rem;
+    margin:0 auto;
+    //margin-left:-1.2rem;
     border-radius:2rem;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    padding:3rem;
+    //border-top-left-radius: 0;
+    //border-bottom-left-radius: 0;
+    padding:1.3rem;
     background-color: v.$Pale-orange;
+    @media (min-width:750px){
+        width:40rem;
+        margin-top:1rem;
+    }
+    @media (min-width:1115px){
+        width:auto;
+        margin:1rem;
+        margin-left:-1.2rem;
+        border-radius:2rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding:3rem;
+        background-color: v.$Pale-orange;
+    }
     &__cart-container{
         display:flex;
         flex-direction: column;
@@ -24,6 +39,7 @@
         gap:1rem;
     }
     &__cart-product{
+        //border:1px solid red;
         display:flex;
         flex-direction: column;
         text-align: center;
@@ -33,12 +49,16 @@
         padding:.5rem;
         padding-right: 1.5rem;
         border-radius:1rem;
-        @media (min-width:1115px){
+        @media (min-width:750px){
             flex-direction: row;
-            justify-content: space-between;
+            gap:.5rem; 
             align-items: center;
             text-align: justify;
-            gap:0rem;
+       }
+        @media (min-width:1115px){
+            //flex-direction: row;
+            justify-content: space-between;         
+            
         }
         & small{
             font-size: .75rem;
@@ -46,40 +66,55 @@
     }
     &__cart-product-title{
         //border:1px solid red;
-        width:20rem;
+        width:10rem;
         margin:0 auto;
         @media (min-width:1115px){
             margin:0;
+            width:20rem;
         }
     }
     &__cart-image{
+        //border:1px solid red;
         width:10rem;
         border-radius:1rem;
         margin:0 auto;
+        @media (min-width:750px){
+            width:7rem;
+        }
         @media (min-width:1115px){
             width:4rem;
             margin:0;
         }
     }
     &__delete{
-        height:2rem;
-        width:2rem;
+        font-size: 1.2rem;
         border:0;
+        display:flex;
         background-color:transparent;
         cursor:pointer;
         position:absolute;
-        margin-left:75%;
+        margin-left:17rem;
+        @media (min-width:750px){
+            margin-left:35.5rem;
+        }
         @media (min-width:1115px){
             position:relative;
-            margin-left:0;
+            //margin-left:0;
         }
         
     }
     
 }
 .cart-actions{
+    //border:1px solid red;
     display:flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap:1.2rem;
+    align-items: center;
+    @media (min-width:1115px){
+        flex-direction: row;
+        justify-content: space-between;
+    }
     &-left{
         &__clear-btn{
             @include mixins.clear;

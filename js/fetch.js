@@ -34,6 +34,7 @@ const productosArray = [
         id: "mate-01",
         titulo: "Mate Amplificador Fender",
         imagen: "./imagenes/fotos-ventas/mates/amplificadores/fender/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/amplificadores/fender/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -44,6 +45,7 @@ const productosArray = [
         id: "mate-02",
         titulo: "Mate Amplificador Marshall",
         imagen: "./imagenes/fotos-ventas/mates/amplificadores/super-marshall/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/amplificadores/super-marshall/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -54,6 +56,7 @@ const productosArray = [
         id: "mate-03",
         titulo: "Mate Calavera Negra",
         imagen: "./imagenes/fotos-ventas/mates/calaveras/negra/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/calaveras/negra/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -64,6 +67,7 @@ const productosArray = [
         id: "mate-04",
         titulo: "Mate Calavera Especial",
         imagen: "./imagenes/fotos-ventas/mates/calaveras/negra-y-dorada/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/calaveras/negra-y-dorada/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -74,6 +78,7 @@ const productosArray = [
         id: "mate-05",
         titulo: "Mate Calavera de plata",
         imagen: "./imagenes/fotos-ventas/mates/calaveras/plata/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/calaveras/plata/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -84,6 +89,7 @@ const productosArray = [
         id: "mate-06",
         titulo: "Mate Camiseta Argentina",
         imagen: "./imagenes/fotos-ventas/mates/deportes/camisetas/argentina/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/deportes/camisetas/argentina/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -94,6 +100,7 @@ const productosArray = [
         id: "mate-07",
         titulo: "Mate Racing Club",
         imagen: "./imagenes/fotos-ventas/mates/deportes/futbol/racing/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/deportes/futbol/racing/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -104,6 +111,7 @@ const productosArray = [
         id: "mate-08",
         titulo: "Mate Homero Simpson",
         imagen: "./imagenes/fotos-ventas/mates/dibujos-animados/simpson/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/dibujos-animados/simpson/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -114,6 +122,7 @@ const productosArray = [
         id: "mate-09",
         titulo: "Mate Jason Voorhees",
         imagen: "./imagenes/fotos-ventas/mates/terror/jason/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/terror/jason/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -124,6 +133,7 @@ const productosArray = [
         id: "mate-10",
         titulo: "Mate Darth Vader",
         imagen: "./imagenes/fotos-ventas/mates/terror/vader/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/terror/vader/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -134,6 +144,7 @@ const productosArray = [
         id: "mate-11",
         titulo: "Mate Eevee",
         imagen: "./imagenes/fotos-ventas/mates/videojuegos/pokemon/eevee/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/videojuegos/pokemon/eevee/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -144,6 +155,7 @@ const productosArray = [
         id: "mate-12",
         titulo: "Mate Pokebola",
         imagen: "./imagenes/fotos-ventas/mates/videojuegos/pokemon/pokebola/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/videojuegos/pokemon/pokebola/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -154,6 +166,29 @@ const productosArray = [
         id: "mate-13",
         titulo: "Mate Groot",
         imagen: "./imagenes/fotos-ventas/mates/superheroes/groot/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/superheroes/groot/mate-02.jpg",
+        categoria: {
+            nombre: "Mates",
+            id: "mates"
+        },
+        precio: 1700
+    },
+    {
+        id: "mate-14",
+        titulo: "Mate Iron Man",
+        imagen: "./imagenes/fotos-ventas/mates/superheroes/iron-man/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/superheroes/iron-man/mate-02.jpg",
+        categoria: {
+            nombre: "Mates",
+            id: "mates"
+        },
+        precio: 1700
+    },
+    {
+        id: "mate-15",
+        titulo: "Mate Granada Punisher",
+        imagen: "./imagenes/fotos-ventas/mates/superheroes/punisher/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/superheroes/punisher/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -166,6 +201,7 @@ const productosArray = [
         id: "taza-01",
         titulo: "Taza Creeper",
         imagen: "./imagenes/fotos-ventas/tazas/videojuegos/minecraft/creeper/taza-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/tazas/videojuegos/minecraft/creeper/taza-02.jpg",
         categoria: {
             nombre: "Tazas",
             id: "tazas"
@@ -177,6 +213,7 @@ const productosArray = [
         id: "maceta-01",
         titulo: "Maceta Emoji enamorado",
         imagen: "./imagenes/fotos-ventas/macetas/emoji/maceta-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/macetas/emoji/maceta-02.jpg",
         categoria: {
             nombre: "Macetas",
             id: "macetas"
@@ -210,7 +247,7 @@ function cargarProductos(productosElegidos){
         const div = document.createElement("div");
         div.classList.add('principal-products__product-container');
         div.innerHTML = `
-            <img class="principal-products__product-image" src="${producto.imagen}" alt="${producto.titulo}">
+            <a href="/producto.html"><img id="${producto.id}" class="principal-products__product-image" src="${producto.imagen}" alt="${producto.titulo}"></a>
             <div class="principal-products__product-details">
                 <h3 class="principal-products__product-title">${producto.titulo}</h3>
                 <p class="principal-products__price">$${producto.precio}</p>
@@ -290,3 +327,24 @@ function actualizarNumerito(){
     let nuevoNumerito = productosEnCarrito.reduce((acc,producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 };
+
+//PROBANDO SI TOMA PRODUCTO AL HACERLE CLICK A LA IMAGEN
+
+
+//let productoEnPagina;
+
+function agregarAPagina(e){
+    const idBoton = e.currentTarget.id;
+    const productoFiltrado = productosArray.find(producto => producto.id === idBoton);
+    
+    localStorage.setItem("producto-en-pagina", JSON.stringify(productoFiltrado));
+};
+
+const imagenes = document.querySelectorAll('img');
+
+imagenes.forEach(imagen => {
+    imagen.addEventListener("click", agregarAPagina);
+});
+
+
+

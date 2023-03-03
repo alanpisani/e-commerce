@@ -5,6 +5,8 @@
 
 .carousel-container{
     box-shadow: 3px 3px 18px;
+    text-align: center;
+    
 }
 .carousel-control-prev, .carousel-control-next{
     z-index:0;
@@ -15,10 +17,34 @@
         height:800px;
     }
     
+    @media (min-width: 1280px){
+        height:40rem;
+    } 
+}
+.banner{
+    width:25rem;
+    height:30rem;
+    @media (min-width: 1115px){
+        width:70rem;
+        height: 45rem;
+    }
+    
+    
 }
 
 .products-container{
     //padding:30px;
+    //border:1px solid red;
+    @media (min-width: 750px){
+        margin-left:-12rem;
+        width:50rem;
+    }
+    @media (min-width: 1115px){
+        margin-left:0;
+        width:auto;
+    }
+    
+    
     &__principal-title{
         //border:1px solid blue;
         text-align: center;
@@ -35,11 +61,16 @@
         // //padding:30px;
         display:grid;
         justify-content: space-between;
-        //gap:45px;
+        gap:1rem;
         margin-bottom:50px;
         //border:1px solid v.$Coshita;
+        @media (min-width: 750px){
+           grid-template-columns: 0.35fr 0.35fr 0.35fr;
+           margin-right:.9rem;
+           width:auto;
+        }
         @media (min-width: 1115px){
-
+            gap:0rem;
             grid-template-columns: 350px 350px 350px;
             //grid-template-rows: 300px 50px;
         } 

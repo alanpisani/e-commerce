@@ -1,25 +1,123 @@
+//TRAER PRODUCTO DEL LOCALSTORAGE
+
+let productoEnPaginaLS= localStorage.getItem("producto-en-pagina");
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+let productoEnPagina;
+let productosEnCarrito;
+
+if (productoEnPaginaLS){
+  productoEnPagina = JSON.parse(productoEnPaginaLS);
+}else{
+  productoEnPagina = [];
+}
+
+if (productosEnCarritoLS){
+  productosEnCarrito = JSON.parse(productosEnCarritoLS);
+}else{
+  productosEnCarrito = [];
+}
+
+const contenedorProducto = document.querySelector('#contenido');
+contenedorProducto.innerHTML= "";
+const section = document.createElement("section");
+section.classList.add("content");
+section.innerHTML=`
+  <style>
+    .gallery__image-container{
+      background-image:url('${productoEnPagina.imagen}');
+    }
+  </style>
+  <article class="gallery">
+  <div class="gallery__image-container">
+      <img src="imagenes/previous-icon.svg" alt="previous" class="gallery__previous">
+      <img src="imagenes/next-icon.svg" alt="next" class="gallery__next">
+  </div>
+  <div class="gallery__thumnails">
+      <img id="1" class="gallery__thumnail" src=${productoEnPagina.imagen}
+          alt="thumnail">
+      <img id="2" class="gallery__thumnail" src=${productoEnPagina.imagen2}
+          alt="thumnail">
+  </div>
+  </article>
+  <article class="details">
+  <h2 class="details__title">${productoEnPagina.titulo}</h2>
+  <p class="details__description">Excelente producto hecho en impresion 3D de material PLA, pintado a mano y
+      terminado con laca para su mayor protección</p>
+  <div class="details__prices">
+      <p class="details__now">${productoEnPagina.precio} <span class="details__discount">20%</span></p>
+      <p class="details__before">$2500</p>
+  </div>
+  <div class="details__product-quantity">
+      <div class="input">
+          <img class="input__minus" src="imagenes/minus-icon.svg" alt="minus icon">
+          <input class="input__number" type="text" value="0">
+          <img class="input__plus" src="imagenes/plus-icon.svg" alt="plus icon">
+      </div>
+      <button class="details__button"><img class="cart-icon" src="imagenes/cart-icon-white.svg" alt=""> Añadir al carrito</button>
+  </div>
+  </article>`;
+  
+  contenedorProducto.append(section);
+
+  //PLASMAR PRODUCTO AL GALLERY MODAL
+
+  const galeriaModal = document.querySelector('#galeria-modal');
+  galeriaModal.innerHTML= "";
+  const article = document.createElement("article");
+  article.classList.add("modal-gallery");
+
+  article.innerHTML= `
+    <style>
+      .modal-gallery__image-container{
+        background-image:url('${productoEnPagina.imagen}');
+      }
+    </style>
+    <div class="modal-gallery__close-container">
+      <img src="imagenes/icon-close.svg" alt="icon close" class="modal-gallery__close">
+    </div>
+    <div class="modal-gallery__image-container">
+      <img src="imagenes/previous-icon.svg" alt="previous" class="modal-gallery__previous">
+      <img src="imagenes/next-icon.svg" alt="next" class="modal-gallery__next">
+    </div>
+    <div class="modal-gallery__thumnails">
+      <img id="m1" class="modal-gallery__thumnail" src="${productoEnPagina.imagen}"
+          alt="thumnail">
+      <img id="m2" class="modal-gallery__thumnail" src="${productoEnPagina.imagen2}"
+          alt="thumnail">
+    </div>`;
+  galeriaModal.append(article);
+
+
 //cambio de cantidad de articulos ingresado por el usuario
 
-let minusBtn = document.querySelector(".input__minus");
-let userInput = document.querySelector(".input__number");
-let plusBtn = document.querySelector(".input__plus");
+  let minusBtn = document.querySelector(".input__minus");
+  let userInput = document.querySelector(".input__number");
+  let plusBtn = document.querySelector(".input__plus");
 
-let userInputNumber = 0;
+  let userInputNumber = 0;
+  productoEnPagina.cantidad = 0;
 
-plusBtn.addEventListener("click", () => {
-  userInputNumber++;
-  userInput.value = userInputNumber;
-  console.log(userInputNumber);
-});
+  plusBtn.addEventListener("click", () => {
+    userInputNumber++;
+    productoEnPagina.cantidad++;
+    userInput.value = userInputNumber;
+    
+  });
 
-minusBtn.addEventListener("click", () => {
-  userInputNumber--;
-  if (userInputNumber <= 0) {
-    userInputNumber = 0;
-  }
-  userInput.value = userInputNumber;
-  console.log(userInputNumber);
-});
+  minusBtn.addEventListener("click", () => {
+    userInputNumber--;
+    productoEnPagina.cantidad--;
+    if (userInputNumber <= 0 || productoEnPagina.cantidad <= 0) {
+      userInputNumber = 0;
+      productoEnPagina.cantidad = 0;
+    }
+    userInput.value = userInputNumber;
+    
+  });
+
+
+
+
 
 //Agregar el total de productos al carrito cuando se presiona el boton AÑADIR AL CARRITO
 
@@ -29,8 +127,18 @@ let lastValue = parseInt(cartNotification.innerText);
 
 addToCartBtn.addEventListener("click", () => {
   lastValue = lastValue + userInputNumber;
+  productoEnPagina.cantidad = lastValue;
   cartNotification.innerText = lastValue;
   cartNotification.style.display = "block";
+  
+  //console.log(productosEnCarrito);
+
+  if (productosEnCarrito.includes(productoEnPagina)){
+      productosEnCarrito.remove(productoEnPagina);
+      productosEnCarrito.push(productoEnPagina);
+  }else{
+    productosEnCarrito.push(productoEnPagina);
+  }
   drawProductInModal();
 });
 
@@ -42,11 +150,14 @@ const cartModal = document.querySelector(".cart-modal");
 const productContainer = document.querySelector(".cart-modal__checkout-container");
 
 cartIconBtn.addEventListener("click", () => {
-  cartModal.classList.toggle("show");
-
+  divCarrito.classList.toggle("show");
+  
   if (lastValue == 0) {
-    productContainer.innerHTML =
-      '<p class="cart-empty">Tu carrito está vacío</p>';
+    divCarrito.innerHTML =`
+    <p class="cart-modal__title">Carrito</p>
+    <div class="cart-modal__checkout-container">
+        <p class="cart-empty">Tu carrito está vacío</p>
+    </div>`;
   }else{
     drawProductInModal();
   };
@@ -57,10 +168,17 @@ cartIconBtn.addEventListener("click", () => {
 function deleteProduct() {
   const deleteProductBtn = document.querySelector(".cart-modal__delete");
   deleteProductBtn.addEventListener("click", () => {
-    productContainer.innerHTML =
-      '<p class="cart-empty">Tu carrito está vacío</p>';
+    divCarrito.innerHTML =`
+    <p class="cart-modal__title">Carrito</p>
+    <div class="cart-modal__checkout-container">
+        <p class="cart-empty">Tu carrito está vacío</p>
+    </div>`;
     lastValue = 0;
+    productoEnPagina.cantidad = lastValue;
     cartNotification.innerText = lastValue;
+    //localStorage.removeItem('productos-en-carrito', productoEnPagina);
+    productosEnCarrito.pop();
+    console.log(productosEnCarrito);
   });
 }
 
@@ -109,8 +227,19 @@ thumbnails.forEach(thumbnail =>{
 
   thumbnail.addEventListener('click', event=>{
 
-    //console.log(event.target.id);
-    imageContainer.style.backgroundImage = `url('./imagenes/mate-calavera-negra/calavera-${event.target.id}.jfif')`;
+    let imagenId = event.target.id;
+    //console.log(imagenId);
+    
+    if (imagenId == 1){
+
+      imageContainer.style.backgroundImage = `url(${productoEnPagina.imagen})`;
+
+    }else {
+
+      imageContainer.style.backgroundImage = `url('${productoEnPagina.imagen2}`;
+
+    };
+    
 
   });
 
@@ -127,8 +256,18 @@ modalThumbnails.forEach(modalThumbnail =>{
 
   modalThumbnail.addEventListener('click', event=>{
 
-    //console.log(event.target.id.slice(-1));
-    modalImageContainer.style.backgroundImage = `url('./imagenes/mate-calavera-negra/calavera-${event.target.id.slice(-1)}.jfif')`;
+    let imagenId = event.target.id;
+    //console.log(imagenId);
+    
+    if (imagenId == "m1"){
+
+      modalImageContainer.style.backgroundImage = `url(${productoEnPagina.imagen})`;
+
+    }else {
+
+      modalImageContainer.style.backgroundImage = `url('${productoEnPagina.imagen2}`;
+
+    };
 
   });
 
@@ -153,39 +292,82 @@ nextModalBtn.addEventListener('click', ()=>{
 });
 
 
+
 //FUNCIONES
 
-function drawProductInModal() {
-  productContainer.innerHTML = `
-    <div class="cart-modal__details-container">
-      <img class="cart-modal__image" src="imagenes/mate-calavera-negra/calavera-1.jfif" alt="cart product thumnail">
-      <div>
-        <p class="cart-modal__product">Mate calavera negra</p>
-        <p class="cart-modal__price">$2000 x 3 <span>$6000</span></p>
-      </div>
-      <img class="cart-modal__delete" src="imagenes/delete-icon.svg" alt="delete">
-    </div>
-    <button class="cart-modal__checkout">Checkout</button>`;
-  deleteProduct();
-  let priceModal = document.querySelector(".cart-modal__price");
-  priceModal.innerHTML = `$2000 x ${lastValue} <span>$${lastValue * 2000}</span>`;
-};
+//PLASMAR PRODUCTO AL CART MODAL
+
+
+const carritoModal = document.querySelector('#carrito-modal');
+carritoModal.innerHTML= "";
+const divCarrito = document.createElement("div");
+divCarrito.classList.add("cart-modal");
+
+  function drawProductInModal() {
+    divCarrito.innerHTML=`
+    <p class="cart-modal__title">Carrito</p>
+    <div class="cart-modal__checkout-container">
+        <div class="cart-modal__details-container">
+            <img class="cart-modal__image" src="${productoEnPagina.imagen}" alt="cart product thumnail">
+            <div>
+                <p class="cart-modal__product">${productoEnPagina.titulo}</p>
+                <p class="cart-modal__price">$${productoEnPagina.precio}x ${productoEnPagina.cantidad} <span>$6000</span></p>
+            </div>
+            <img class="cart-modal__delete" src="imagenes/delete-icon.svg" alt="delete">
+        </div>
+        <a href="#" id="checkout" class="cart-modal__checkout">Checkout</a>
+    </div>`;
+    carritoModal.append(divCarrito);
+    deleteProduct();
+    enviarAlCarrito()
+
+    let priceModal = document.querySelector(".cart-modal__price");
+    priceModal.innerHTML = `$${productoEnPagina.precio} x ${lastValue} <span>$${lastValue * productoEnPagina.precio}</span>`;
+  };
 
 function changeNextImage(imgContainer) {
-  if (imgIndex == 4){
+  if (imgIndex == 2){
     imgIndex = 1;
+    imgContainer.style.backgroundImage = `url('${productoEnPagina.imagen2}`;
   }else{
-    imgIndex++
+    imgIndex++;
+    imgContainer.style.backgroundImage = `url('${productoEnPagina.imagen}`;
   };
-  imgContainer.style.backgroundImage = `url('./imagenes/mate-calavera-negra/calavera-${imgIndex}.jfif')`;
+  
   
 };
 
 function changePreviousImage(imgContainer){
   if (imgIndex == 1){
-    imgIndex = 4;
+    imgIndex = 2;
+    imgContainer.style.backgroundImage = `url('${productoEnPagina.imagen}`;
   }else{
     imgIndex--;
+    imgContainer.style.backgroundImage = `url('${productoEnPagina.imagen2}`;
   }
-  imgContainer.style.backgroundImage = `url('./imagenes/mate-calavera-negra/calavera-${imgIndex}.jfif')`;
 };
+
+//ENVIAR PRODUCTO AL LOCALSTORAGE
+
+
+
+function enviarAlCarrito(){
+  const checkout = document.querySelector('#checkout');
+  checkout.addEventListener('click', () =>{
+    
+    
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    //console.log(productosEnCarrito);
+    
+  });
+
+}
+
+
+
+
+
+
+
+
+
