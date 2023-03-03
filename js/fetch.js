@@ -247,7 +247,7 @@ function cargarProductos(productosElegidos){
         const div = document.createElement("div");
         div.classList.add('principal-products__product-container');
         div.innerHTML = `
-            <a href="./producto.html"><img id="${producto.id}" class="principal-products__product-image" src="${producto.imagen}" alt="${producto.titulo}"></a>
+            <a href="producto.html"><img id="${producto.id}" class="principal-products__product-image" src="${producto.imagen}" alt="${producto.titulo}"></a>
             <div class="principal-products__product-details">
                 <h3 class="principal-products__product-title">${producto.titulo}</h3>
                 <p class="principal-products__price">$${producto.precio}</p>
