@@ -315,7 +315,7 @@ divCarrito.classList.add("cart-modal");
             </div>
             <img class="cart-modal__delete" src="imagenes/delete-icon.svg" alt="delete">
         </div>
-        <a href="#" id="checkout" class="cart-modal__checkout">Checkout</a>
+        <a href="./carrito.html" id="checkout" class="cart-modal__checkout">Checkout</a>
     </div>`;
     carritoModal.append(divCarrito);
     deleteProduct();
