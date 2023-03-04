@@ -2,9 +2,8 @@
 @use 'mixins';
 
 
-
 .carousel-container{
-    box-shadow: 3px 3px 18px;
+    
     text-align: center;
     
 }
@@ -13,17 +12,38 @@
 }
 .carousel-inner{
     //border:1px solid red;
+    background-color:black;
+    box-shadow: 3px 3px 18px;
+    height:auto;
+    width:100%;
+    @media (min-width: 800px){
+        height:40rem;
+        width:45rem;
+        margin-left:-10rem;
+    }
+    @media (min-width: 1110px){
+        height:50rem;
+        width:100%;
+    }
+   
     @media (min-width: 1115px){
         height:800px;
+        width:100%;
+        margin-left:0;
     }
     
     @media (min-width: 1280px){
-        height:40rem;
+        height:auto;
+        margin-left:0;
     } 
 }
 .banner{
-    width:25rem;
-    height:30rem;
+    height:300px;
+    
+    @media (min-width: 800px){
+        width:45rem;
+        height:auto;
+    }
     @media (min-width: 1115px){
         width:70rem;
         height: 45rem;

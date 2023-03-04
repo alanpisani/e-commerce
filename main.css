@@ -516,7 +516,6 @@ body {
 }
 
 .carousel-container {
-  box-shadow: 3px 3px 18px;
   text-align: center;
 }
 
@@ -524,20 +523,47 @@ body {
   z-index: 0;
 }
 
+.carousel-inner {
+  background-color: black;
+  box-shadow: 3px 3px 18px;
+  height: auto;
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .carousel-inner {
+    height: 40rem;
+    width: 45rem;
+    margin-left: -10rem;
+  }
+}
+@media (min-width: 1110px) {
+  .carousel-inner {
+    height: 50rem;
+    width: 100%;
+  }
+}
 @media (min-width: 1115px) {
   .carousel-inner {
     height: 800px;
+    width: 100%;
+    margin-left: 0;
   }
 }
 @media (min-width: 1280px) {
   .carousel-inner {
-    height: 40rem;
+    height: auto;
+    margin-left: 0;
   }
 }
 
 .banner {
-  width: 25rem;
-  height: 30rem;
+  height: 300px;
+}
+@media (min-width: 800px) {
+  .banner {
+    width: 45rem;
+    height: auto;
+  }
 }
 @media (min-width: 1115px) {
   .banner {
