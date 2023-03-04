@@ -13,7 +13,7 @@
     z-index: 1;
     @media (min-width: 1115px){
         height: 112px;
-        border-bottom: 1px solid variables.$Grayish-blue;
+        border-bottom: 1px solid variables.$Orange;
     }
     &__navegation{
         width: 260px;
@@ -51,16 +51,16 @@
         position:relative;
         &--notification{
             background-color: variables.$Coshita;
-            width:15px;
-            height:12px;
+            width:20px;
+            height:20px;
             border-radius:16px;
             position:absolute;
-            top: -2px;
-            right:-5px;
-            font-size:0.6em;
+            top: -5px;
+            right:-14px;
+            font-size:1rem;
             text-align: center;
             color:variables.$White;
-            display:none;
+            //display:none;
         }
         &:hover{
             cursor:pointer;
@@ -101,4 +101,7 @@
 }
 .cart-icon{
     width:22px;
+}
+.display{
+    display:none;
 }

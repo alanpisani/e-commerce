@@ -1,9 +1,9 @@
 @use 'variables' as v;
 @use 'mixins';
 
-.header{
-    position:static;
-}
+// .header{
+//     position:static;
+// }
 .wrapper{
     grid-template-columns: 1fr;
     @media (min-width:1115px){
@@ -14,7 +14,7 @@
 }
 aside{
     position:fixed;
-    top:0px;
+    top:0;
     left:0;
     z-index: 1;
     //display:none;
@@ -34,6 +34,7 @@ aside{
     visibility: hidden;
     transition:.2s;
     @media (min-width:1115px){
+        top:112px;
         display:flex;
         //border:1px solid red;
         position:sticky;

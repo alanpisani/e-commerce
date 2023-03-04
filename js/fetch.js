@@ -239,6 +239,7 @@ const botonesCategoria = document.querySelectorAll('.aside-nav__category-button'
 const tituloCategoria = document.querySelector('#product-title');
 let botonesAgregar = document.querySelectorAll('.products-container__all-products-btn');
 const numerito = document.querySelector('#numerito');
+const numeron = document.querySelector('#numeron');
 
 
 function cargarProductos(productosElegidos){
@@ -326,6 +327,7 @@ function agregarAlCarrito(e){
 function actualizarNumerito(){
     let nuevoNumerito = productosEnCarrito.reduce((acc,producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
+    numeron.innerText = nuevoNumerito;
 };
 
 //PROBANDO SI TOMA PRODUCTO AL HACERLE CLICK A LA IMAGEN
