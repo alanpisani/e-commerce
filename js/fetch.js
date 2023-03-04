@@ -219,18 +219,18 @@ const productosArray = [
             id: "macetas"
         },
         precio: 1500
-    }
-    //LAPICEROS
-    // {
-    //     id: "lapicero-01",
-    //     titulo: "Lapicero Batman",
-    //     imagen: "./imagenes/fotos-ventas/lapiceros/batman/lapicero-01.jpg",
-    //     categoria: {
-    //         nombre: "Lapiceros",
-    //         id: "lapiceros"
-    //     },
-    //     precio: 1600
-    // },
+    },
+    //VARIADOS
+     {
+         id: "variado-01",
+         titulo: "Lapicero Batman",
+         imagen: "./imagenes/fotos-ventas/lapiceros/batman/lapicero-01.jpg",
+        categoria: {
+             nombre: "Variados",
+             id: "variados"
+         },
+         precio: 1600
+     }
     
 ];
 
@@ -291,6 +291,7 @@ function actualizarFuncionesAgregar (){
     botonesAgregar = document.querySelectorAll('.products-container__all-products-btn');
     botonesAgregar.forEach(boton => {
         boton.addEventListener("click", agregarAlCarrito);
+        actualizarImagen();
     });
 };
 
@@ -341,12 +342,15 @@ function agregarAPagina(e){
     
     localStorage.setItem("producto-en-pagina", JSON.stringify(productoFiltrado));
 };
+function actualizarImagen(){
+    const imagenes = document.querySelectorAll('img');
 
-const imagenes = document.querySelectorAll('img');
-
-imagenes.forEach(imagen => {
+    imagenes.forEach(imagen => {
     imagen.addEventListener("click", agregarAPagina);
 });
+}
+actualizarImagen();
+
 
 
 

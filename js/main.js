@@ -132,6 +132,7 @@ addToCartBtn.addEventListener("click", () => {
   cartNotification.style.display = "block";
   
   //console.log(productosEnCarrito);
+  drawProductInModal();
 
   if (productosEnCarrito.includes(productoEnPagina)){
       productosEnCarrito.remove(productoEnPagina);
@@ -139,7 +140,8 @@ addToCartBtn.addEventListener("click", () => {
   }else{
     productosEnCarrito.push(productoEnPagina);
   }
-  drawProductInModal();
+  
+  
 });
 
 //Mostrar el modal con el detalle del carrito
