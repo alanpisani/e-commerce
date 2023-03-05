@@ -130,9 +130,18 @@ addToCartBtn.addEventListener("click", () => {
   productoEnPagina.cantidad = lastValue;
   cartNotification.innerText = lastValue;
   cartNotification.style.display = "block";
+  divCarrito.classList.add("show");
+
+  if (lastValue == 0) {
+    divCarrito.innerHTML =`
+    <p class="cart-modal__title">Carrito</p>
+    <div class="cart-modal__checkout-container">
+        <p class="cart-empty">Tu carrito está vacío</p>
+    </div>`;
+  }else{
+    drawProductInModal();
+  };
   
-  //console.log(productosEnCarrito);
-  drawProductInModal();
 
   if (productosEnCarrito.includes(productoEnPagina)){
       productosEnCarrito.remove(productoEnPagina);
@@ -153,16 +162,7 @@ const productContainer = document.querySelector(".cart-modal__checkout-container
 
 cartIconBtn.addEventListener("click", () => {
   divCarrito.classList.toggle("show");
-  
-  if (lastValue == 0) {
-    divCarrito.innerHTML =`
-    <p class="cart-modal__title">Carrito</p>
-    <div class="cart-modal__checkout-container">
-        <p class="cart-empty">Tu carrito está vacío</p>
-    </div>`;
-  }else{
-    drawProductInModal();
-  };
+
 });
 
 //Borrar el contenido del carrito

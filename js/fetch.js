@@ -33,8 +33,8 @@ const productosArray = [
     {
         id: "mate-01",
         titulo: "Mate Amplificador Fender",
-        imagen: "./imagenes/fotos-ventas/mates/amplificadores/fender/mate-01.jpg",
-        imagen2: "./imagenes/fotos-ventas/mates/amplificadores/fender/mate-02.jpg",
+        imagen: "./imagenes/fotos-ventas/mates/musica/amplificadores/fender/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/musica/amplificadores/fender/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -44,8 +44,8 @@ const productosArray = [
     {
         id: "mate-02",
         titulo: "Mate Amplificador Marshall",
-        imagen: "./imagenes/fotos-ventas/mates/amplificadores/super-marshall/mate-01.jpg",
-        imagen2: "./imagenes/fotos-ventas/mates/amplificadores/super-marshall/mate-02.jpg",
+        imagen: "./imagenes/fotos-ventas/mates/musica/amplificadores/super-marshall/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/musica/amplificadores/super-marshall/mate-02.jpg",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -100,7 +100,40 @@ const productosArray = [
         id: "mate-07",
         titulo: "Mate Racing Club",
         imagen: "./imagenes/fotos-ventas/mates/deportes/futbol/racing/mate-01.jpg",
-        imagen2: "./imagenes/fotos-ventas/mates/deportes/futbol/racing/mate-02.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/deportes/futbol/racing/mate-02.png",
+        categoria: {
+            nombre: "Mates",
+            id: "mates"
+        },
+        precio: 1500
+    },
+    {
+        id: "mate-17",
+        titulo: "Mate Independiente",
+        imagen: "./imagenes/fotos-ventas/mates/deportes/futbol/rojo/mate-01.png",
+        imagen2: "./imagenes/fotos-ventas/mates/deportes/futbol/rojo/mate-02.png",
+        categoria: {
+            nombre: "Mates",
+            id: "mates"
+        },
+        precio: 1500
+    },
+    {
+        id: "mate-18",
+        titulo: "Mate River Plate",
+        imagen: "./imagenes/fotos-ventas/mates/deportes/futbol/river/mate-01.png",
+        imagen2: "./imagenes/fotos-ventas/mates/deportes/futbol/river/mate-02.png",
+        categoria: {
+            nombre: "Mates",
+            id: "mates"
+        },
+        precio: 1500
+    },
+    {
+        id: "mate-19",
+        titulo: "Mate San Lorenzo",
+        imagen: "./imagenes/fotos-ventas/mates/deportes/futbol/cuervo/mate-01.png",
+        imagen2: "./imagenes/fotos-ventas/mates/deportes/futbol/cuervo/mate-02.png",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -144,7 +177,7 @@ const productosArray = [
         id: "mate-11",
         titulo: "Mate Eevee",
         imagen: "./imagenes/fotos-ventas/mates/videojuegos/pokemon/eevee/mate-01.jpg",
-        imagen2: "./imagenes/fotos-ventas/mates/videojuegos/pokemon/eevee/mate-02.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/videojuegos/pokemon/eevee/mate-02.png",
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -195,6 +228,28 @@ const productosArray = [
         },
         precio: 1700
     },
+    {
+        id: "mate-16",
+        titulo: "Mate Pennywise",
+        imagen: "./imagenes/fotos-ventas/mates/terror/it/mate-01.png",
+        imagen2: "./imagenes/fotos-ventas/mates/terror/it/mate-02.png",
+        categoria: {
+            nombre: "Mates",
+            id: "mates"
+        },
+        precio: 1700
+    },
+    {
+        id: "mate-20",
+        titulo: "Mate Piano",
+        imagen: "./imagenes/fotos-ventas/mates/musica/piano/mate-01.png",
+        imagen2: "./imagenes/fotos-ventas/mates/musica/piano/mate-02.png",
+        categoria: {
+            nombre: "Mates",
+            id: "mates"
+        },
+        precio: 1700
+    },
 
     //TAZAS
     {
@@ -202,6 +257,17 @@ const productosArray = [
         titulo: "Taza Creeper",
         imagen: "./imagenes/fotos-ventas/tazas/videojuegos/minecraft/creeper/taza-01.jpg",
         imagen2: "./imagenes/fotos-ventas/tazas/videojuegos/minecraft/creeper/taza-02.jpg",
+        categoria: {
+            nombre: "Tazas",
+            id: "tazas"
+        },
+        precio: 2000
+    },
+    {
+        id: "taza-02",
+        titulo: "Taza Scream",
+        imagen: "./imagenes/fotos-ventas/tazas/terror/scream/taza-01.png",
+        imagen2: "./imagenes/fotos-ventas/tazas/terror/scream/taza-02.png",
         categoria: {
             nombre: "Tazas",
             id: "tazas"
@@ -220,6 +286,30 @@ const productosArray = [
         },
         precio: 1500
     },
+    {
+        id: "llavero-01",
+        titulo: "Llavero Coshita 3D!",
+        imagen: "./imagenes/fotos-ventas/llaveros/coshita/llavero-01.png",
+        imagen2: "./imagenes/fotos-ventas/llaveros/coshita/llavero-02.png",
+        categoria: {
+            nombre: "Llaveros",
+            id: "llaveros"
+        },
+        precio: 500
+    },
+    {
+        id: "llavero-02",
+        titulo: "Llavero Zildjian",
+        imagen: "./imagenes/fotos-ventas/llaveros/zildjian/llavero-01.png",
+        imagen2: "./imagenes/fotos-ventas/llaveros/zildjian/llavero-01.png",
+        categoria: {
+            nombre: "Llaveros",
+            id: "llaveros"
+        },
+        precio: 500
+    },
+    //LLAVEROS
+
     //VARIADOS
      {
          id: "variado-01",

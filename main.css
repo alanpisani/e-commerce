@@ -72,6 +72,7 @@ body {
   font-size: 1rem;
   text-align: center;
   color: hsl(0deg, 0%, 100%);
+  display: none;
 }
 .header__cart:hover {
   cursor: pointer;
