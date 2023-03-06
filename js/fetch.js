@@ -307,6 +307,9 @@ const productosArray = [
 ];
 
 const contenedorProductos = document.querySelector('.principal-products__products-container');
+const botonesCategoria = document.querySelectorAll('.aside-nav__category-button');
+const tituloCategoria = document.querySelector('#product-title');
+let botonesAgregar = document.querySelectorAll('.products-container__all-products-btn');
 const numerito = document.querySelector('#numerito');
 const numeron = document.querySelector('#numeron');
 

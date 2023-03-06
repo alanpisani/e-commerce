@@ -161,7 +161,7 @@ aside{
         display:grid;
         grid-template-columns: 1fr; // y 0.3fr;
         justify-items: center;
-        gap:2rem;
+        gap:3rem;
         //border:1px solid blue;
         @media (min-width:700px){
             grid-template-columns: 1fr 1fr;
@@ -191,7 +191,10 @@ aside{
         max-width:100%;
         //height:250px;
         height:14rem;
+        margin-top:-2rem;
         border-radius:1rem;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
         @media (min-width:1115px){
             height:350px;
         }
@@ -201,7 +204,7 @@ aside{
         background-color:pink;
         padding:.5rem;
         border-radius:1rem;
-        margin-top:-1.7rem;
+        margin-top:-0.5rem;
         height:10rem;
         position:relative;
         display:flex;
