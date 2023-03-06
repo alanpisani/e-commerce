@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+=======
+// fetch('https://api.escuelajs.co/api/v1/products')
+// .then(res => res.json())
+// .then (data => console.log(data))
+
+// let shoppingCartArray = [];
+// let total = 0;
+
+// const api = 'https://api.escuelajs.co/api/v1/products'
+
+// async function fetchie(parameter){
+
+// let res = await fetch(parameter);
+// let data = await res.json();
+
+// let productsArray = data.slice(1,5);
+
+// console.log(productsArray);
+
+// productsArray.forEach(product => {
+
+//     console.log(product);
+    
+// });
+
+// }
+
+// fetchie(api);
+
+>>>>>>> 115c7621f20b85b15634ee0294cbc5c512bd7140
 
 //PRODUCTOS
 
@@ -27,8 +58,13 @@ const productosArray = [
     {
         id: "mate-03",
         titulo: "Mate Calavera Negra",
+<<<<<<< HEAD
         imagen: "./imagenes/fotos-ventas/mates/calaveras/negra/mate-01.png",
         imagen2: "./imagenes/fotos-ventas/mates/calaveras/negra/mate-02.png",
+=======
+        imagen: "./imagenes/fotos-ventas/mates/calaveras/negra/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/calaveras/negra/mate-02.jpg",
+>>>>>>> 115c7621f20b85b15634ee0294cbc5c512bd7140
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -115,8 +151,13 @@ const productosArray = [
     {
         id: "mate-08",
         titulo: "Mate Homero Simpson",
+<<<<<<< HEAD
         imagen: "./imagenes/fotos-ventas/mates/dibujos-animados/simpson/mate-01.png",
         imagen2: "./imagenes/fotos-ventas/mates/dibujos-animados/simpson/mate-02.png",
+=======
+        imagen: "./imagenes/fotos-ventas/mates/dibujos-animados/simpson/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/dibujos-animados/simpson/mate-02.jpg",
+>>>>>>> 115c7621f20b85b15634ee0294cbc5c512bd7140
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -126,8 +167,13 @@ const productosArray = [
     {
         id: "mate-09",
         titulo: "Mate Jason Voorhees",
+<<<<<<< HEAD
         imagen: "./imagenes/fotos-ventas/mates/terror/jason/mate-01.png",
         imagen2: "./imagenes/fotos-ventas/mates/terror/jason/mate-02.png",
+=======
+        imagen: "./imagenes/fotos-ventas/mates/terror/jason/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/terror/jason/mate-02.jpg",
+>>>>>>> 115c7621f20b85b15634ee0294cbc5c512bd7140
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -137,8 +183,13 @@ const productosArray = [
     {
         id: "mate-10",
         titulo: "Mate Darth Vader",
+<<<<<<< HEAD
         imagen: "./imagenes/fotos-ventas/mates/terror/vader/mate-01.png",
         imagen2: "./imagenes/fotos-ventas/mates/terror/vader/mate-02.png",
+=======
+        imagen: "./imagenes/fotos-ventas/mates/terror/vader/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/terror/vader/mate-02.jpg",
+>>>>>>> 115c7621f20b85b15634ee0294cbc5c512bd7140
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -159,8 +210,13 @@ const productosArray = [
     {
         id: "mate-12",
         titulo: "Mate Pokebola",
+<<<<<<< HEAD
         imagen: "./imagenes/fotos-ventas/mates/videojuegos/pokemon/pokebola/mate-01.png",
         imagen2: "./imagenes/fotos-ventas/mates/videojuegos/pokemon/pokebola/mate-02.png",
+=======
+        imagen: "./imagenes/fotos-ventas/mates/videojuegos/pokemon/pokebola/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/videojuegos/pokemon/pokebola/mate-02.jpg",
+>>>>>>> 115c7621f20b85b15634ee0294cbc5c512bd7140
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -170,8 +226,13 @@ const productosArray = [
     {
         id: "mate-13",
         titulo: "Mate Groot",
+<<<<<<< HEAD
         imagen: "./imagenes/fotos-ventas/mates/superheroes/groot/mate-01.png",
         imagen2: "./imagenes/fotos-ventas/mates/superheroes/groot/mate-02.png",
+=======
+        imagen: "./imagenes/fotos-ventas/mates/superheroes/groot/mate-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/mates/superheroes/groot/mate-02.jpg",
+>>>>>>> 115c7621f20b85b15634ee0294cbc5c512bd7140
         categoria: {
             nombre: "Mates",
             id: "mates"
@@ -273,7 +334,11 @@ const productosArray = [
         id: "llavero-02",
         titulo: "Llavero Zildjian",
         imagen: "./imagenes/fotos-ventas/llaveros/zildjian/llavero-01.png",
+<<<<<<< HEAD
         imagen2: "./imagenes/fotos-ventas/llaveros/zildjian/llavero-02.png",
+=======
+        imagen2: "./imagenes/fotos-ventas/llaveros/zildjian/llavero-01.png",
+>>>>>>> 115c7621f20b85b15634ee0294cbc5c512bd7140
         categoria: {
             nombre: "Llaveros",
             id: "llaveros"
@@ -292,6 +357,7 @@ const productosArray = [
              id: "variados"
          },
          precio: 1600
+<<<<<<< HEAD
      },
      {
         id: "variado-02",
@@ -304,6 +370,9 @@ const productosArray = [
         },
         precio: 1600
     }
+=======
+     }
+>>>>>>> 115c7621f20b85b15634ee0294cbc5c512bd7140
     
 ];
 
