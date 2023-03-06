@@ -8,7 +8,18 @@
 @use 'input';
 @use 'modal-cart';
 @use 'modal-gallery';
+@use 'index';
+@use 'products';
+@use 'main-cart';
+@use 'footer';
 
+
+body{
+
+    background-image: url('./imagenes/background.png');
+    background-size: 50%;
+
+}
 .main-container{
     position:relative;
     width:375px;

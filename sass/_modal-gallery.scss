@@ -18,22 +18,22 @@
         width:16px;
         &:hover{
             cursor:pointer;
-            content: url(../imagenes/icon-close-orange.svg);
+            content: url('./imagenes/icon-close-orange.svg');
         }
     }
     &__image-container{
-        background-image: url(../imagenes/mate-calavera-negra/calavera-1.jfif);
+        background-image: url('./imagenes/mate-calavera-negra/calavera-1.jfif');
         background-size: cover;
         height: 446px;
         //width:446px;
-        background-position-y: -250px;
+        background-position-y: -50px;
         border-radius:16px;
         margin-bottom:32px;
         position:relative;
     }
     &__thumnails{
         display:flex;
-        justify-content: space-between;
+        justify-content:space-around;
         width:450px;
         margin:auto;
         
@@ -44,7 +44,7 @@
         border-radius:16px;
         &:hover{
             cursor:pointer;
-            border:2px solid v.$Orange;
+            border:2px solid v.$Coshita;
         }
     }
     &__previous{

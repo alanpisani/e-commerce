@@ -1,0 +1,277 @@
+@use 'variables' as v;
+@use 'mixins';
+
+// .header{
+//     position:static;
+// }
+.wrapper{
+    grid-template-columns: 1fr;
+    @media (min-width:1115px){
+        display:grid;
+        grid-template-columns: 1fr 6fr;
+        gap:0;
+    }
+}
+aside{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+    //display:none;
+    background-color:v.$Black;
+    height:100vh;
+    display:flex;
+    padding:3rem;
+    padding-right:0;
+    list-style: none;
+    border-radius:1rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width:300px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .75);
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition:.2s;
+    @media (min-width:1115px){
+        top:112px;
+        display:flex;
+        //border:1px solid red;
+        position:sticky;
+        margin-left:61px;
+        box-shadow:none;
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+}
+.aside-visible-mobile{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+.aside-nav{
+    &__menu{
+        display:flex;
+        flex-direction: column;
+        gap:1rem;
+        list-style: none;
+    }
+    &__category-button{
+        background-color: transparent;
+        border:0;
+        color:v.$Pale-orange;
+        font-size:1.1rem;
+        cursor: pointer;
+        display:flex;
+        gap:1rem;
+        font-weight: 600;
+        padding:1rem;
+        align-items: center;
+        
+    }
+    &__cart-btn{
+        margin-top:2rem;
+        color:white;
+        display:flex;   
+        gap:.7rem;
+        padding:1rem;
+        font-size: 1.1rem;
+        font-weight: 600;  
+        .numerito{
+            background-color: v.$Coshita;
+            color:v.$Pale-orange;
+            padding: 0 .25rem;
+            border-radius:0.25rem;
+            font-weight: 700;            
+        }
+        
+    }
+    .active{
+        color:v.$Pale-orange;
+        background-color: v.$Coshita;
+        width:100%;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 1rem;
+        position:relative;
+        &::before{
+            content:'';
+            position:absolute;
+            width:1rem;
+            height:2rem;
+            bottom:100%;
+            right:0;
+            background-color:transparent;
+            border-bottom-right-radius: .5rem;
+            box-shadow: 0 1rem 0 v.$Coshita;
+        }
+        &::after{
+            content:'';
+            position:absolute;
+            width:1rem;
+            height:2rem;
+            top:100%;
+            right:0;
+            background-color:transparent;
+            border-top-right-radius: .5rem;
+            box-shadow: 0 -1rem 0 v.$Coshita;
+        }
+        .numerito{
+            color:v.$Coshita;
+            background-color: v.$Pale-orange
+        }
+    }
+}
+
+.bi-hand-index-thumb, 
+.bi-hand-index-thumb-fill{
+    transform: rotateZ(90deg);
+}
+
+.principal-products{
+    //border:1px solid green;
+    //margin:1rem;
+    margin:0 auto;
+    //margin-top:1rem;
+    padding:1rem;
+    border-radius:2rem;
+    width:22rem;
+    @media (min-width:700px){
+        width:40rem;
+    }
+    @media (min-width:1115px){
+        margin-top:0;
+        margin-left:-1.2rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding:3rem;
+        width:auto;
+    }
+    
+    &__title{
+        color:v.$Pale-orange;
+        margin-bottom:4rem;
+        text-align: center;
+        text-transform:uppercase;
+        font-size:2rem;
+        font-weight: 900;
+    }
+    &__products-container{
+        display:grid;
+        grid-template-columns: 1fr; // y 0.3fr;
+        justify-items: center;
+        gap:2rem;
+        //border:1px solid blue;
+        @media (min-width:700px){
+            grid-template-columns: 1fr 1fr;
+            gap:0.5rem;
+        }
+        @media (min-width:1100px){
+            grid-template-columns: 1fr 1fr;
+            gap:6rem;
+        }
+        @media (min-width:1700px){
+            grid-template-columns: repeat(3, 1fr);
+            margin-left:5rem;
+            gap:5rem;
+        }
+    }
+    &__product-container{
+        //border:1px solid blue;
+        width:250px;
+        
+        @media (min-width:1115px){
+            width:350px;
+        }
+        
+    }
+    &__product-image{
+        width:100%;
+        max-width:100%;
+        //height:250px;
+        height:14rem;
+        border-radius:1rem;
+        @media (min-width:1115px){
+            height:350px;
+        }
+
+    }
+    &__product-details{
+        background-color:pink;
+        padding:.5rem;
+        border-radius:1rem;
+        margin-top:-1.7rem;
+        height:10rem;
+        position:relative;
+        display:flex;
+        flex-direction: column;
+        gap:.5rem;
+        @media (min-width:1115px){
+            
+        }
+    }
+    &__product-title{
+        font-size:.85rem;
+        font-weight: 800;
+        text-align: center;
+        @media (min-width:1115px){
+            font-size:1rem;
+            text-align: left;
+        }
+        
+    }
+    &__price{
+        font-weight: 500;
+        text-align: center;
+        @media (min-width:1115px){
+            font-size:1rem;
+            text-align: left;
+        }
+        
+        
+    }
+}
+.mobile-container-master{
+    display:flex;
+    justify-content: end;
+    //margin-left:23rem;
+    margin-bottom: 2rem;
+    //border:1px solid red;
+    //width:6rem;
+    @media (min-width:1115px){
+        display:none;
+    }
+}
+.mobile-container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:7rem;
+    background-color: v.$Coshita;
+    &__title{
+        color:v.$Pale-orange;
+    }
+    &__open-menu{
+        font-size: 2rem;
+        background-color: transparent;
+        color:v.$Pale-orange;
+        cursor:pointer;
+        border:none;
+    }
+    &__close-menu{
+        color:red;
+        background-color:transparent;
+        font-size: 1rem;
+        position: absolute;
+        top:0.7rem;
+        right:0rem;
+        cursor: pointer;
+        @media (min-width:1115px){
+            display:none;
+        }
+    }
+}
+
+
+

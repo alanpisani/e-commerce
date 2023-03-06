@@ -1,0 +1,41 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.footer{
+    border:2px solid green;
+    margin-top:1rem;
+    background-color: v.$Black;
+    display:flex;
+    justify-content: space-between;
+    height:7rem;
+    align-items: center;
+    position: relative;
+    @media (max-width:330px){
+        width:20rem;
+        margin-left:1rem;
+    }
+    &__informacion{
+        color:v.$Coshita;
+    }
+    &__iconos{
+        //border:1px solid red;
+        width:10rem;
+        height:5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__icono{
+        width:3rem;
+    }
+}
+
+.wsp{
+    float:right;
+    //border:1px solid red;
+    position: sticky;
+    bottom:5rem;
+    @media (max-width:330px){
+        margin:0 -20%;
+    }
+}

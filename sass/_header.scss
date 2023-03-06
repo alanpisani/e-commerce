@@ -3,23 +3,29 @@
 .header{
     //border:1px solid red;
     display:flex;
+    position:sticky;
+    top:0;
+    background-color:black;
     align-items: center;
     justify-content: space-between;
     height: 68px;
     padding: 0 24px;
+    z-index: 1;
     @media (min-width: 1115px){
         height: 112px;
-        border-bottom: 1px solid variables.$Grayish-blue;
+        border-bottom: 1px solid variables.$Orange;
     }
     &__navegation{
-        width: 175px;
+        width: 260px;
+        text-align: center;
         height:100%;
-        //border:1px solid red;
+        //border:1px solid blue;
         display:flex;
         align-items: center;
         justify-content: space-between;
+        //gap:px;
         @media (min-width: 1115px){
-            width: 590px;
+            width: 750px;
         }
     }
     &__menu{
@@ -44,14 +50,14 @@
     &__cart{
         position:relative;
         &--notification{
-            background-color: variables.$Orange;
-            width:15px;
-            height:12px;
+            background-color: variables.$Coshita;
+            width:20px;
+            height:20px;
             border-radius:16px;
             position:absolute;
-            top: -2px;
-            right:-5px;
-            font-size:0.6em;
+            top: -5px;
+            right:-14px;
+            font-size:1rem;
             text-align: center;
             color:variables.$White;
             display:none;
@@ -72,15 +78,30 @@
         }
         &:hover{
             cursor:pointer;
-            border:2px solid variables.$Orange;
+            border:2px solid variables.$Coshita;
         }
+    }
+    &__logos{
+        //border:1px solid red;
+        width:320px;
+        height:50px;
+        margin-right:10px;
+    }
+    &__logo{
+        //border:1px solid blue;
+        width:160px;
+    }
+    &__logo-2{
+        //border:1px solid blue;
+        height:45px;
+
     }
     
 
 }
-.header__logo{
-    width:100px;
-}
 .cart-icon{
     width:22px;
+}
+.display{
+    display:none;
 }

@@ -1,0 +1,132 @@
+@use 'variables' as v;
+@use 'mixins';
+
+
+.carousel-container{
+    
+    text-align: center;
+    
+}
+.carousel-control-prev, .carousel-control-next{
+    z-index:0;
+}
+.carousel-inner{
+    //border:1px solid red;
+    background-color:black;
+    box-shadow: 3px 3px 18px;
+    height:auto;
+    width:100%;
+    @media (min-width: 800px){
+        height:40rem;
+        width:45rem;
+        margin-left:-10rem;
+    }
+    @media (min-width: 1110px){
+        height:50rem;
+        width:100%;
+    }
+   
+    @media (min-width: 1115px){
+        height:800px;
+        width:100%;
+        margin-left:0;
+    }
+    
+    @media (min-width: 1280px){
+        height:auto;
+        margin-left:0;
+    } 
+}
+.banner{
+    height:300px;
+    
+    @media (min-width: 800px){
+        width:45rem;
+        height:auto;
+    }
+    @media (min-width: 1115px){
+        width:70rem;
+        height: 45rem;
+    }
+    
+    
+}
+
+.products-container{
+    //padding:30px;
+    //border:1px solid red;
+    @media (min-width: 750px){
+        margin-left:-12rem;
+        width:50rem;
+    }
+    @media (min-width: 1115px){
+        margin-left:0;
+        width:auto;
+    }
+    
+    
+    &__principal-title{
+        //border:1px solid blue;
+        text-align: center;
+        margin-top:60px;
+        margin-bottom:60px;
+        p{
+            color:v.$Coshita;
+            font-size: 2em;
+            font-weight: 700;
+            text-shadow: 3px 3px 18px; 
+        }
+    }
+    &__just-products{
+        // //padding:30px;
+        display:grid;
+        justify-content: space-between;
+        gap:1rem;
+        margin-bottom:50px;
+        //border:1px solid v.$Coshita;
+        @media (min-width: 750px){
+           grid-template-columns: 0.35fr 0.35fr 0.35fr;
+           margin-right:.9rem;
+           width:auto;
+        }
+        @media (min-width: 1115px){
+            gap:0rem;
+            grid-template-columns: 350px 350px 350px;
+            //grid-template-rows: 300px 50px;
+        } 
+    }
+    &__product-container{
+        background-color:v.$Pale-orange;
+        border:2px solid v.$Coshita;
+        box-shadow: 3px 3px 18px;
+        border-radius: 16px;
+    }
+    &__title{
+        text-transform: uppercase;
+        margin-top:15px;
+        color:v.$Coshita;
+        font-size:1.3em;
+        font-weight: 550;
+        text-align: center;
+    }
+    &__product-image{
+        width:100%;
+        padding:30px;
+        transition:0.7s;
+        &:hover{
+            padding:20px;
+        }
+    }
+    &__all-products-btn{
+        @include mixins.button;
+        &:hover{
+            text-decoration: none;
+            color:v.$Pale-orange;
+        }
+        @media (min-width:1115px){
+            width:300px;
+            margin:0 auto;
+        }
+    }
+    
+}

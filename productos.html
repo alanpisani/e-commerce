@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Coshita 3D || Impresiones 3D</title>
+    
+    
+
+</head>
+<body>
+    <!-- <style>body{
+        background-image: none;
+        background-color:black;
+    }
+    </style> -->
+
+    <header class="header">
+        <div class="header__navegation">
+            <img class="header__menu" src="imagenes/menu-icon-white.svg" alt="menu icon">
+            <div class="header__logos">
+                <a href="index.html"><img class="header__logo" src="imagenes/coshita3d.svg" alt="logo 1"></a>
+                <img class="header__logo-2" src="imagenes/calavera-blanca.svg" alt="logo 2">
+            </div>
+            <nav class="navbar">
+                <ul class="navbar__items">
+                    <li><a class="navbar__link" href="index.html">Inicio</a></li>
+                    <li><a class="navbar__link" href="#">Productos</a></li>
+                    <!-- <li><a class="navbar__link" href="#">Inicio</a></li> -->
+                    <li><a class="navbar__link" href="#">Quienes somos</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Inicio modal navbar -->
+        <div class="modal-navbar__background">
+            <nav class="modal-navbar">
+                <img class="modal-navbar__close-icon" src="imagenes/icon-close.svg" alt="close icon">
+                <ul class="modal-navbar__items">
+                    <li><a class="modal-navbar__link" href="index.html">Inicio</a></li>
+                    <li><a class="modal-navbar__link" href="#">Productos</a></li>
+                    <!-- <li><a class="modal-navbar__link" href="#">Inicio</a></li> -->
+                    <li><a class="modal-navbar__link" href="#">Acerca de</a></li>
+                </ul>
+        </div>
+        <!-- Final modal navbar -->
+
+        <div class="header__cart-avatar">
+            <div class="header__cart">
+                <a href="carrito.html"><div id="numeron" class="header__cart--notification">0</div>
+                <img class="cart-icon" src="imagenes/cart-icon-white.svg" alt="cart icon"></a>
+            </div>
+            <img class="header__avatar" src="imagenes/foto-perfil.jpeg" alt="foto de perfil">
+        </div>
+    </header>
+
+    <main class="wrapper">
+        <aside>
+            <nav class="aside-nav">
+                <button id="close-menu" class="mobile-container__close-menu">
+                    <i class="bi bi-x-circle"></i>
+                </button>
+                <ul class="aside-nav__menu">
+                    <li>
+                        <button id="all" class="aside-nav__category-button active"><i class="bi bi-hand-index-thumb-fill"></i>Todos los productos</button>
+                    </li>
+                    <li>
+                        <button id="mates" class="aside-nav__category-button"><i class="bi bi-hand-index-thumb"></i>Mates</button>
+                    </li>
+                    <li>
+                        <button id="tazas" class="aside-nav__category-button"><i class="bi bi-hand-index-thumb"></i>Tazas</button>
+                    </li>
+                    <li>
+                        <button id="macetas" class="aside-nav__category-button"><i class="bi bi-hand-index-thumb"></i>Macetas</button>
+                    </li>
+                    <li>
+                        <button id="llaveros" class="aside-nav__category-button"><i class="bi bi-hand-index-thumb"></i>Llaveros</button>
+                    </li>
+                    <li>
+                        <button id="variados" class="aside-nav__category-button"><i class="bi bi-hand-index-thumb"></i>Variados</button>
+                    </li>
+                    <li>
+                        <a class="aside-nav__cart-btn" href="./carrito.html">
+                            <i class="bi bi-cart"></i> Carrito <span id="numerito" class="numerito">0</span>     
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <article class="principal-products">
+            <h2 class="principal-products__title" id="product-title">Todos los productos</h2>
+            <div class="mobile-container-master">
+                <div class="mobile-container">
+                    <button id="open-menu" class="mobile-container__open-menu">
+                        <i class="bi bi-patch-plus"></i>
+                    </button>
+                    <h4 class="mobile-container__title">catalogo</h4>
+                </div>
+            </div>
+            <div class="principal-products__products-container">
+                
+                <!-- ESTO SE VA A RELLENAR CON JS -->
+                
+            </div>
+        </article>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__informacion">
+            <p>Lorem ipsum dolor sit ameeee</p>
+        </div>
+        <div class="footer__iconos">
+            <a target="_blank" href="https://www.instagram.com/coshita3d/">
+                <img class="footer__icono" src="./imagenes/instagram-icon.svg" alt="instagram icon">
+            </a>
+
+        </div>
+    </footer>
+    <a target="_blank" class="footer_icono" href="https://wa.me/541158725403">
+        <img class="footer__icono wsp" src="./imagenes/whatsapp-icon.svg" alt="whatsapp icon">
+    </a>  
+
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/navbar.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="js/menu.js"></script>
+    
+
+    
+</body>
+</html>
