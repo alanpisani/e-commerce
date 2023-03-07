@@ -24,14 +24,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        gap:1rem;
+        margin-right:2rem;
     }
     &__icono{
         width:3rem;
+        //height:10rem;
+        background-color:white;
+        background-repeat: initial;
+        border-radius:100%;
+        outline:1px solid black;
     }
 }
 
 .wsp{
     float:right;
+    background-color:transparent;
     //border:1px solid red;
     position: sticky;
     bottom:5rem;

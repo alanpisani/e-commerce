@@ -23,7 +23,7 @@ body {
 @media (min-width: 1115px) {
   .header {
     height: 112px;
-    border-bottom: 1px solid hsl(26deg, 100%, 55%);
+    border-bottom: 1px solid hsl(346deg, 93%, 54%);
   }
 }
 .header__navegation {
@@ -708,6 +708,7 @@ aside {
 @media (min-width: 1115px) {
   aside {
     top: 112px;
+    bottom: -1000px;
     display: flex;
     position: sticky;
     margin-left: 61px;
@@ -793,6 +794,15 @@ aside {
   background-color: hsl(25deg, 100%, 94%);
 }
 
+.indexazo {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 1115px) {
+  .indexazo {
+    display: none;
+  }
+}
+
 .bi-hand-index-thumb,
 .bi-hand-index-thumb-fill {
   transform: rotateZ(90deg);
@@ -865,9 +875,8 @@ aside {
   max-width: 100%;
   height: 14rem;
   margin-top: -2rem;
-  border-radius: 1rem;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
 }
 @media (min-width: 1115px) {
   .principal-products__product-image {
@@ -877,7 +886,8 @@ aside {
 .principal-products__product-details {
   background-color: pink;
   padding: 0.5rem;
-  border-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
   margin-top: -0.5rem;
   height: 10rem;
   position: relative;
@@ -904,17 +914,6 @@ aside {
   .principal-products__price {
     font-size: 1rem;
     text-align: left;
-  }
-}
-
-.mobile-container-master {
-  display: flex;
-  justify-content: end;
-  margin-bottom: 2rem;
-}
-@media (min-width: 1115px) {
-  .mobile-container-master {
-    display: none;
   }
 }
 
@@ -1170,13 +1169,20 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  margin-right: 2rem;
 }
 .footer__icono {
   width: 3rem;
+  background-color: white;
+  background-repeat: initial;
+  border-radius: 100%;
+  outline: 1px solid black;
 }
 
 .wsp {
   float: right;
+  background-color: transparent;
   position: sticky;
   bottom: 5rem;
 }
@@ -1219,6 +1225,10 @@ body {
   text-align: center;
   margin-top: 30px;
   color: hsla(0deg, 0%, 0%, 0.5);
+}
+
+.scrollhidden {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

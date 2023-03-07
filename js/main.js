@@ -328,8 +328,8 @@ divCarrito.classList.add("cart-modal");
   };
 
 function changeNextImage(imgContainer) {
-  if (imgIndex == 2){
-    imgIndex = 1;
+  if (imgIndex == 1){
+    imgIndex = 0;
     imgContainer.style.backgroundImage = `url('${productoEnPagina.imagen2}`;
   }else{
     imgIndex++;

@@ -20,7 +20,7 @@
 
     <header class="header">
         <div class="header__navegation">
-            <img class="header__menu" src="imagenes/menu-icon-white.svg" alt="menu icon">
+            <img id="open-menu" class="header__menu" src="imagenes/menu-icon-white.svg" alt="menu icon">
             <div class="header__logos">
                 <a href="index.html"><img class="header__logo" src="imagenes/coshita3d.svg" alt="logo 1"></a>
                 <img class="header__logo-2" src="imagenes/calavera-blanca.svg" alt="logo 2">
@@ -35,18 +35,6 @@
             </nav>
         </div>
         
-        <!-- Inicio modal navbar -->
-        <div class="modal-navbar__background">
-            <nav class="modal-navbar">
-                <img class="modal-navbar__close-icon" src="imagenes/icon-close.svg" alt="close icon">
-                <ul class="modal-navbar__items">
-                    <li><a class="modal-navbar__link" href="index.html">Inicio</a></li>
-                    <li><a class="modal-navbar__link" href="#">Productos</a></li>
-                    <!-- <li><a class="modal-navbar__link" href="#">Inicio</a></li> -->
-                    <li><a class="modal-navbar__link" href="#">Acerca de</a></li>
-                </ul>
-        </div>
-        <!-- Final modal navbar -->
 
         <div class="header__cart-avatar">
             <div class="header__cart">
@@ -64,6 +52,9 @@
                     <i class="bi bi-x-circle"></i>
                 </button>
                 <ul class="aside-nav__menu">
+                    <li>
+                        <a href="index.html" class="aside-nav__category-button indexazo"><i class="bi bi-hand-index-thumb"></i>Ir al inicio</a>
+                    </li>
                     <li>
                         <button id="all" class="aside-nav__category-button active"><i class="bi bi-hand-index-thumb-fill"></i>Todos los productos</button>
                     </li>
@@ -93,14 +84,6 @@
         
         <article class="principal-products">
             <h2 class="principal-products__title" id="product-title">Todos los productos</h2>
-            <div class="mobile-container-master">
-                <div class="mobile-container">
-                    <button id="open-menu" class="mobile-container__open-menu">
-                        <i class="bi bi-patch-plus"></i>
-                    </button>
-                    <h4 class="mobile-container__title">catalogo</h4>
-                </div>
-            </div>
             <div class="principal-products__products-container">
                 
                 <!-- ESTO SE VA A RELLENAR CON JS -->
@@ -113,13 +96,15 @@
 
     <footer class="footer">
         <div class="footer__informacion">
-            <p>Lorem ipsum dolor sit ameeee</p>
+            <p>Contactanos a través de: </p>
         </div>
         <div class="footer__iconos">
-            <a target="_blank" href="https://www.instagram.com/coshita3d/">
-                <img class="footer__icono" src="./imagenes/instagram-icon.svg" alt="instagram icon">
+            <a target="_blank" href="https://www.facebook.com/impresionescoshita3d">
+                <img class="footer__icono" src="./imagenes/fb-icon.svg" alt="Facebook">
             </a>
-
+            <a target="_blank" href="https://www.instagram.com/coshita3d/">
+                <img class="footer__icono" src="./imagenes/instagram-icon.svg" alt="Instagran">
+            </a>
         </div>
     </footer>
     <a target="_blank" class="footer_icono" href="https://wa.me/541158725403">
@@ -127,7 +112,7 @@
     </a>  
 
     <!-- <script src="js/main.js"></script> -->
-    <script src="js/navbar.js"></script>
+    
     <script src="js/fetch.js"></script>
     <script src="js/menu.js"></script>
     
