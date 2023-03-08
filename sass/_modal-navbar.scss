@@ -1,38 +1,42 @@
-@use 'variables';
+@use 'variables' as v;
 @use 'mixins';
 
 .modal-navbar{
-    &__background{
         @include mixins.modal-background;
-        display:none;
+        //display:none;
+        background-color: v.$Black;
+        width:250px;
+        height: 100vh;
+        padding:28px 24px;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .75);
 
-    }
-    background-color: variables.$White;
-    width:250px;
-    height: 100vh;
-    padding:28px 24px;
-    display:block;
-    &__items{
-        //border: 1px solid red;
-        display:flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height:200px;
-        list-style: none;
-        margin-top:50px;
-    }
-    &__link{
-        text-decoration: none;
-        color:variables.$Very-vark-blue;
-        font-weight: 700;
-        font-size: 1.1em;
-    }
-    &__close-icon{
-        float:right;
-        &:hover{
-            cursor:pointer;
-            content: url('./imagenes/icon-close-orange.svg');
+        &__items{
+            //border: 1px solid red;
+            display:flex;
+            flex-direction:column;
+            justify-content: space-around;
+            height:200px;
+            list-style: none;
+            margin-top:50px;
         }
-    }
+        &__link{
+            text-decoration: none;
+            color:v.$White;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition:.2s;
+            &:hover{
+                color:v.$Coshita;
+                text-decoration: none;
+            }
+        }
+        &__close-icon{
+            float:right;
+            width:2rem;
+            height:2rem;
+            background-color:transparent;
+           
+        }
     
 }
+

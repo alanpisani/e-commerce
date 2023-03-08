@@ -250,8 +250,19 @@ const productosArray = [
     {
         id: "maceta-01",
         titulo: "Maceta Emoji enamorado",
-        imagen: "./imagenes/fotos-ventas/macetas/emoji/maceta-01.jpg",
-        imagen2: "./imagenes/fotos-ventas/macetas/emoji/maceta-02.jpg",
+        imagen: "./imagenes/fotos-ventas/macetas/emoji/maceta-01.png",
+        imagen2: "./imagenes/fotos-ventas/macetas/emoji/maceta-02.png",
+        categoria: {
+            nombre: "Macetas",
+            id: "macetas"
+        },
+        precio: 1500
+    },
+    {
+        id: "maceta-01",
+        titulo: "Maceta EDarth Vader",
+        imagen: "./imagenes/fotos-ventas/macetas/vader/maceta-01.png",
+        imagen2: "./imagenes/fotos-ventas/macetas/vader/maceta-02.png",
         categoria: {
             nombre: "Macetas",
             id: "macetas"
@@ -296,8 +307,8 @@ const productosArray = [
      {
         id: "variado-02",
         titulo: "Funko Lio Messi",
-        imagen: "./imagenes/fotos-ventas/funkos/futbol/messi/funko-01.jpg",
-        imagen2: "./imagenes/fotos-ventas/funkos/futbol/messi/funko-02.jpg",
+        imagen: "./imagenes/fotos-ventas/funkos/futbol/messi/funko-01.png",
+        imagen2: "./imagenes/fotos-ventas/funkos/futbol/messi/funko-02.png",
         categoria: {
             nombre: "Variados",
             id: "variados"

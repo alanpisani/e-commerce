@@ -124,12 +124,7 @@ aside{
         }
     }
 }
-.indexazo{
-    margin-bottom:1.5rem;
-    @media (min-width:1115px){
-        display:none;
-    }
-}
+
 
 .bi-hand-index-thumb, 
 .bi-hand-index-thumb-fill{
@@ -263,11 +258,12 @@ aside{
     &__close-menu{
         color:red;
         background-color:transparent;
-        font-size: 1rem;
+        font-size: 1.5rem;
         position: absolute;
         top:0.7rem;
         right:0rem;
         cursor: pointer;
+        border:0;
         @media (min-width:1115px){
             display:none;
         }

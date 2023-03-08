@@ -10,7 +10,7 @@ let cont = 1;
 //modalNavbar.style.display = 'none';
 
 hamburgerMenu.addEventListener('click', ()=>{
-  console.log('abrir modal');
+  //console.log('abrir modal');
   modalNavbar.style.display = 'block';
   body.style.overflow = 'hidden';  //ocultar scroll cuando se abre el navmodal
 

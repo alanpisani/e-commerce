@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
@@ -26,7 +27,7 @@
     <main class="main-container">
         <header class="header">
             <div class="header__navegation">
-                <img class="header__menu" src="imagenes/menu-icon-white.svg" alt="menu icon">
+                <img id="open-menu" class="header__menu" src="imagenes/menu-icon-white.svg" alt="menu icon">
                 <div class="header__logos">
                     <img class="header__logo" src="imagenes/coshita3d.svg" alt="logo 1">
                     <img class="header__logo-2" src="imagenes/calavera-blanca.svg" alt="logo 2">
@@ -43,17 +44,7 @@
             </div>
 
             <!-- Inicio modal navbar -->
-            <div class="modal-navbar__background">
-                <nav class="modal-navbar">
-                    <img class="modal-navbar__close-icon" src="imagenes/icon-close.svg" alt="close icon">
-                    <ul class="modal-navbar__items">
-                        <li><a class="modal-navbar__link" href="./index.html">Inicio</a></li>
-                        <li><a class="modal-navbar__link" href="./productos.html">Productos</a></li>
-                        <li><a class="modal-navbar__link" href="#">Quienes somos</a></li>
-                        <li><a class="modal-navbar__link" href="#">Acerca de</a></li>
-                        <!-- <li><a class="modal-navbar__link" href="#">Contacto</a></li> -->
-                    </ul>
-            </div>
+    
             <!-- Final modal navbar -->
 
             <div class="header__cart-avatar">
@@ -64,6 +55,22 @@
                 <img class="header__avatar" src="imagenes/foto-perfil.jpeg" alt="foto de perfil">
             </div>
         </header>
+        
+        <!--TENGO QUE CREAR EL MODAL NAVBAR-->
+        <nav id="navIndex" class="modal-navbar">
+            <button id="close-menu" class="mobile-container__close-menu">
+                <i class="bi bi-x-circle"></i>
+            </button>
+            <ul class="modal-navbar__items">
+                <li><a class="modal-navbar__link" href="index.html">Inicio</a></li>
+                <li><a class="modal-navbar__link" href="./productos.html">Productos</a></li>
+                <li><a class="modal-navbar__link" href="#">Quienes somos</a></li>
+               
+            </ul>
+        </nav>
+
+
+        <!-- ACA TERMINA EL MODAL NAVBAR -->
 
         <article class = "carousel-container">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -166,8 +173,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     -->
 
-    <script src="js/navbar.js"></script>
-    <script src="js.fetch"></script>
+    
+    <!-- <script src="js.fetch"></script> -->
+
+    <script src="js/menu.js"></script>
+
+
     
 
 </body>

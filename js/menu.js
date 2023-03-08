@@ -2,21 +2,36 @@ const openMenu = document.querySelector("#open-menu");
 const closeMenu = document.querySelector("#close-menu");
 const aside = document.querySelector("aside");
 const body =  document.querySelector('body');
+const navIndex = document.querySelector('#navIndex');
+
 
 openMenu.addEventListener("click", () => {
-
-    aside.classList.add("aside-visible-mobile");
+    if(aside){
+        aside.classList.add("aside-visible-mobile");
+    }
+    if (navIndex){
+        navIndex.style.display = "block";
+    }
+    
     body.classList.add("scrollhidden");
 });
 
 closeMenu.addEventListener("click", () => {
-
-    aside.classList.remove("aside-visible-mobile");
+    if (aside){
+        aside.classList.remove("aside-visible-mobile");
+        
+    }
+    if (navIndex){
+        navIndex.style.display = "none";
+    }
     body.classList.remove("scrollhidden");
 });
 
+if(botonesCategoria){
 botonesCategoria.forEach(boton => boton.addEventListener("click", () =>{
 
     aside.classList.remove("aside-visible-mobile");
 
-}));
+}))
+
+};
