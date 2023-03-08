@@ -13,7 +13,7 @@ openMenu.addEventListener("click", () => {
         navIndex.style.display = "block";
     }
     
-    body.classList.add("scrollhidden");
+    
 });
 
 closeMenu.addEventListener("click", () => {
@@ -24,7 +24,7 @@ closeMenu.addEventListener("click", () => {
     if (navIndex){
         navIndex.style.display = "none";
     }
-    body.classList.remove("scrollhidden");
+    
 });
 
 if(botonesCategoria){
