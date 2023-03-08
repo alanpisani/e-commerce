@@ -260,7 +260,7 @@ const productosArray = [
     },
     {
         id: "maceta-01",
-        titulo: "Maceta EDarth Vader",
+        titulo: "Maceta Darth Vader",
         imagen: "./imagenes/fotos-ventas/macetas/vader/maceta-01.png",
         imagen2: "./imagenes/fotos-ventas/macetas/vader/maceta-02.png",
         categoria: {
@@ -269,6 +269,7 @@ const productosArray = [
         },
         precio: 1500
     },
+    //LLAVEROS
     {
         id: "llavero-01",
         titulo: "Llavero Coshita 3D!",
@@ -291,14 +292,38 @@ const productosArray = [
         },
         precio: 500
     },
-    //LLAVEROS
+    {
+        id: "llavero-03",
+        titulo: "Llavero Chucky",
+        imagen: "./imagenes/fotos-ventas/llaveros/chucky/llavero-01.png",
+        imagen2: "./imagenes/fotos-ventas/llaveros/chucky/llavero-02.png",
+        categoria: {
+            nombre: "Llaveros",
+            id: "llaveros"
+        },
+        precio: 500
+    },
+    {
+        id: "llavero-04",
+        titulo: "Llavero Michael Myers",
+        imagen: "./imagenes/fotos-ventas/llaveros/myers/llavero-01.png",
+        imagen2: "./imagenes/fotos-ventas/llaveros/myers/llavero-02.png",
+        categoria: {
+            nombre: "Llaveros",
+            id: "llaveros"
+        },
+        precio: 500
+    },
+    
+    
 
     //VARIADOS
      {
          id: "variado-01",
          titulo: "Lapicero Batman",
-         imagen: "./imagenes/fotos-ventas/lapiceros/batman/lapicero-01.jpg",
-        categoria: {
+         imagen: "./imagenes/fotos-ventas/lapiceros/batman/lapicero-01.png",
+         imagen2: "./imagenes/fotos-ventas/lapiceros/batman/lapicero-02.png",
+         categoria: {
              nombre: "Variados",
              id: "variados"
          },
@@ -306,6 +331,17 @@ const productosArray = [
      },
      {
         id: "variado-02",
+        titulo: "Lapicero Eevee",
+        imagen: "./imagenes/fotos-ventas/lapiceros/eevee/lapicero-01.png",
+        imagen2: "./imagenes/fotos-ventas/lapiceros/eevee/lapicero-02.png",
+        categoria: {
+            nombre: "Variados",
+            id: "variados"
+        },
+        precio: 1600
+    },
+     {
+        id: "variado-03",
         titulo: "Funko Lio Messi",
         imagen: "./imagenes/fotos-ventas/funkos/futbol/messi/funko-01.png",
         imagen2: "./imagenes/fotos-ventas/funkos/futbol/messi/funko-02.png",

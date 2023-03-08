@@ -28,7 +28,7 @@ closeMenu.addEventListener("click", () => {
 });
 
 if(botonesCategoria){
-botonesCategoria.forEach(boton => boton.addEventListener("click", () =>{
+    botonesCategoria.forEach(boton => boton.addEventListener("click", () =>{
 
     aside.classList.remove("aside-visible-mobile");
 
