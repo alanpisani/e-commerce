@@ -34,7 +34,7 @@ const productosArray = [
     },
     {
         id: "mate-04",
-        titulo: "Mate Calavera Especial",
+        titulo: "Mate Calavera Day",
         imagen: "./imagenes/fotos-ventas/mates/calaveras/negra-y-dorada/mate-01.jpg",
         imagen2: "./imagenes/fotos-ventas/mates/calaveras/negra-y-dorada/mate-02.jpg",
         categoria: {
@@ -237,6 +237,17 @@ const productosArray = [
         titulo: "Taza Scream",
         imagen: "./imagenes/fotos-ventas/tazas/terror/scream/taza-01.png",
         imagen2: "./imagenes/fotos-ventas/tazas/terror/scream/taza-02.png",
+        categoria: {
+            nombre: "Tazas",
+            id: "tazas"
+        },
+        precio: 2000
+    },
+    {
+        id: "taza-03",
+        titulo: "Taza Donuts",
+        imagen: "./imagenes/fotos-ventas/tazas/comida/dona/taza-01.png",
+        imagen2: "./imagenes/fotos-ventas/tazas/comida/dona/taza-02.png",
         categoria: {
             nombre: "Tazas",
             id: "tazas"

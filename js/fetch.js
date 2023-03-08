@@ -246,6 +246,17 @@ const productosArray = [
         },
         precio: 2000
     },
+    {
+        id: "taza-03",
+        titulo: "Taza Donuts",
+        imagen: "./imagenes/fotos-ventas/tazas/comida/dona/taza-01.png",
+        imagen2: "./imagenes/fotos-ventas/tazas/comida/dona/taza-02.png",
+        categoria: {
+            nombre: "Tazas",
+            id: "tazas"
+        },
+        precio: 2000
+    },
     //MACETAS
     {
         id: "maceta-01",
