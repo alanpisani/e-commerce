@@ -35,8 +35,8 @@ const productosArray = [
     {
         id: "mate-04",
         titulo: "Mate Calavera Day",
-        imagen: "./imagenes/fotos-ventas/mates/calaveras/negra-y-dorada/mate-01.jpg",
-        imagen2: "./imagenes/fotos-ventas/mates/calaveras/negra-y-dorada/mate-02.jpg",
+        imagen: "./imagenes/fotos-ventas/mates/calaveras/negra-y-dorada/mate-01.png",
+        imagen2: "./imagenes/fotos-ventas/mates/calaveras/negra-y-dorada/mate-02.png",
         categoria: {
             nombre: "Mates",
             id: "mates"
