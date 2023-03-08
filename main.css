@@ -274,10 +274,11 @@ body {
   padding: 5px;
 }
 .details__description {
-  font-size: 0.94em;
+  font-size: 1.3em;
   color: hsl(25deg, 100%, 94%);
   line-height: 24px;
   margin-bottom: 12px;
+  text-align: center;
 }
 .details__prices {
   display: flex;
@@ -335,7 +336,7 @@ body {
     margin-bottom: 48px;
   }
   .details__description {
-    font-size: 0.9em;
+    font-size: 1.2em;
     margin-bottom: 37px;
   }
   .details__prices {

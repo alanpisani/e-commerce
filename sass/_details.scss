@@ -13,10 +13,11 @@
         padding:5px;
     }
     &__description{
-        font-size:0.94em;
+        font-size:1.3em;
         color: v.$Pale-orange;
         line-height:24px;
         margin-bottom:12px;
+        text-align: center;
     }
     &__prices{
         //border:1px solid red;
@@ -59,7 +60,7 @@
             margin-bottom:48px;
         }
         &__description{
-            font-size:0.9em;
+            font-size:1.2em;
             margin-bottom:37px;
         }
         &__prices{

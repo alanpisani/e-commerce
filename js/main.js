@@ -41,8 +41,8 @@ section.innerHTML=`
   </article>
   <article class="details">
   <h2 class="details__title">${productoEnPagina.titulo}</h2>
-  <p class="details__description">Excelente producto hecho en impresion 3D de material PLA, pintado a mano y
-      terminado con laca para su mayor protección</p>
+  <p class="details__description">Material PLA, biodegradable, ecológico, no tóxico, con polímero en su interior apto para consumo. 
+    Producto pintado a mano y barnizado para mayor protección.</p>
   <div class="details__prices">
       <p class="details__now">${productoEnPagina.precio} <span class="details__discount">20%</span></p>
       <p class="details__before">$2500</p>
