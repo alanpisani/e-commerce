@@ -70,7 +70,6 @@
     
     &__principal-title{
         //border:1px solid blue;
-        text-align: center;
         margin-top:60px;
         margin-bottom:60px;
         p{
@@ -86,6 +85,7 @@
         justify-content: space-between;
         gap:3rem;
         margin-bottom:50px;
+        text-align: center;
         //border:1px solid v.$Coshita;
         @media (min-width: 750px){
            grid-template-columns: 0.35fr 0.35fr 0.35fr;
@@ -111,7 +111,7 @@
         color:v.$Coshita;
         font-size:1.3em;
         font-weight: 550;
-        text-align: center;
+        //text-align: center;
     }
     &__imagen{
         width:100%;
