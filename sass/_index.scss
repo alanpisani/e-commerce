@@ -84,7 +84,7 @@
         // //padding:30px;
         display:grid;
         justify-content: space-between;
-        gap:1rem;
+        gap:3rem;
         margin-bottom:50px;
         //border:1px solid v.$Coshita;
         @media (min-width: 750px){
@@ -98,13 +98,14 @@
             //grid-template-rows: 300px 50px;
         } 
     }
-    &__product-container{
+    &__producto{
         background-color:v.$Pale-orange;
         border:2px solid v.$Coshita;
         box-shadow: 3px 3px 18px;
         border-radius: 16px;
+        
     }
-    &__title{
+    &__titulo{
         text-transform: uppercase;
         margin-top:15px;
         color:v.$Coshita;
@@ -112,7 +113,7 @@
         font-weight: 550;
         text-align: center;
     }
-    &__product-image{
+    &__imagen{
         width:100%;
         padding:30px;
         transition:0.7s;
