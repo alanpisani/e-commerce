@@ -44,8 +44,8 @@ section.innerHTML=`
   <p class="details__description">Material PLA, biodegradable, ecológico, no tóxico, con polímero en su interior apto para consumo. 
     Producto pintado a mano y barnizado para mayor protección.</p>
   <div class="details__prices">
-      <p class="details__now">${productoEnPagina.precio} <span class="details__discount">20%</span></p>
-      <p class="details__before">$2500</p>
+      <p class="details__now">$${productoEnPagina.precio} <!--span class="details__discount">20%</span></p-->
+      <!-- p class="details__before">$2500</p-->
   </div>
   <div class="details__product-quantity">
       <div class="input">
