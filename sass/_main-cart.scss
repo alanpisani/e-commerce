@@ -24,6 +24,9 @@
         padding:3rem;
         background-color: v.$Pale-orange;
     }
+    @media (min-width:1800px){
+        width:95rem;
+    }
     &__cart-container{
         display:flex;
         flex-direction: column;
@@ -95,11 +98,16 @@
         position:absolute;
         margin-left:17rem;
         @media (min-width:750px){
-            margin-left:35.5rem;
+            margin-left:35.53rem;
         }
         @media (min-width:1115px){
-            margin-left:54.5rem
+            margin-left:54.5rem;
             //margin-left:0;
+            //position:relative;
+        }
+        @media (min-width:1800px){
+            position:relative;
+            margin-left:0;
         }
         
     }

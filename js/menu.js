@@ -5,6 +5,8 @@ const body =  document.querySelector('body');
 const navIndex = document.querySelector('#navIndex');
 
 
+
+
 openMenu.addEventListener("click", () => {
     if(aside){
         aside.classList.add("aside-visible-mobile");
@@ -28,10 +30,12 @@ closeMenu.addEventListener("click", () => {
 });
 
 if(botonesCategoria){
-    botonesCategoria.forEach(boton => boton.addEventListener("click", () =>{
+        botonesCategoria.forEach(boton => boton.addEventListener("click", () =>{
 
-    aside.classList.remove("aside-visible-mobile");
+            aside.classList.remove("aside-visible-mobile");
 
-}))
+        }));
 
+}else{
+    console.log("no menu");
 };

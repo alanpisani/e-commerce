@@ -444,7 +444,6 @@ function agregarAlCarrito(e){
     if (productosEnCarrito.some(producto => producto.id === idBoton)){
         const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
         productosEnCarrito[index].cantidad++;
-        //productoAgregado.cantidad++;
     }else{
         productoAgregado.cantidad = 1;
         productosEnCarrito.push(productoAgregado);
@@ -459,6 +458,13 @@ function actualizarNumerito(){
     let nuevoNumerito = productosEnCarrito.reduce((acc,producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
     numeron.innerText = nuevoNumerito;
+    if (numeron.innerText == 0){
+        numeron.style.opacity = 0;
+    }else{
+        numeron.style.opacity = 1;
+    }
+    
+    
 };
 
 //PROBANDO SI TOMA PRODUCTO AL HACERLE CLICK A LA IMAGEN

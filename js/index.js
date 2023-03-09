@@ -361,6 +361,36 @@ const productosArray = [
     }
 ];
 
+//FUNCION aleatorizar array (los productos)
+
+productosArray.sort((a,b) => 0.5 - Math.random());
+
+
+//LIMITAR EL ARRAY DE PRODUCTO A 3
+
+const tresProductos = productosArray.slice(0,3);
+console.log(tresProductos);
+
+
+//MOSTRAR EN PANTALLA LOS 3 PRODUCTOS ALEATORIOS
+const contenedorTresProductos = document.querySelector(".products-container__just-products");
+contenedorTresProductos.innerHTML = "";
+
+tresProductos.forEach(producto => {
+    const div = document.createElement("div");
+    div.classList.add("products-container__producto");
+    div.innerHTML = `
+        <a href="producto.html"><img id="${producto.id}" class="products-container__imagen" src="${producto.imagen}"
+        alt="${producto.id}"></a>
+        <div class="products-container__detalles">
+            <h3 class="products-container__titulo">${producto.titulo}</h3>
+        </div>`
+
+    contenedorTresProductos.append(div);
+})
+
+
+
 function agregarAPagina(e){
     const idBoton = e.currentTarget.id;
     const productoFiltrado = productosArray.find(producto => producto.id === idBoton);

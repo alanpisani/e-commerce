@@ -72,6 +72,7 @@ body {
   font-size: 1rem;
   text-align: center;
   color: hsl(0deg, 0%, 100%);
+  opacity: 0;
 }
 .header__cart:hover {
   cursor: pointer;
@@ -974,6 +975,11 @@ aside {
     background-color: hsl(25deg, 100%, 94%);
   }
 }
+@media (min-width: 1800px) {
+  .principal-cart-products {
+    width: 95rem;
+  }
+}
 .principal-cart-products__cart-container {
   display: flex;
   flex-direction: column;
@@ -1051,12 +1057,18 @@ aside {
 }
 @media (min-width: 750px) {
   .principal-cart-products__delete {
-    margin-left: 35.5rem;
+    margin-left: 35.53rem;
   }
 }
 @media (min-width: 1115px) {
   .principal-cart-products__delete {
     margin-left: 54.5rem;
+  }
+}
+@media (min-width: 1800px) {
+  .principal-cart-products__delete {
+    position: relative;
+    margin-left: 0;
   }
 }
 
