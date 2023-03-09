@@ -12,7 +12,7 @@
 }
 .carousel-inner{
     //border:1px solid red;
-    background-color:black;
+    background-color:transparent;
     box-shadow: 3px 3px 18px;
     height:auto;
     width:100%;
@@ -29,7 +29,8 @@
     @media (min-width: 1115px){
         height:800px;
         width:100%;
-        margin-left:0;
+       // margin-left:0;
+       //border:2px solid green;
     }
     
     @media (min-width: 1280px){
@@ -45,8 +46,8 @@
         height:auto;
     }
     @media (min-width: 1115px){
-        width:70rem;
-        height: 45rem;
+        width:40rem;
+        height: 30rem;
     }
     
     
@@ -58,6 +59,7 @@
 .products-container{
     //padding:30px;
     //border:1px solid red;
+    
     @media (min-width: 750px){
         margin-left:-12rem;
         width:50rem;
@@ -87,6 +89,7 @@
         gap:3rem;
         margin-bottom:50px;
         text-align: center;
+        
         //border:1px solid v.$Coshita;
         @media (min-width: 750px){
            grid-template-columns: 0.35fr 0.35fr 0.35fr;
@@ -108,11 +111,11 @@
     }
     &__titulo{
         text-transform: uppercase;
-        margin-top:15px;
-        color:v.$Coshita;
-        font-size:1.3em;
-        font-weight: 550;
-        //text-align: center;
+        margin-top:1px;
+        color:black;
+        text-shadow: 0.9px 1.3px 0px rgba(0,0,0,0.3);
+        font-size: 1rem;
+        text-align: center;
     }
     &__imagen{
         width:100%;

@@ -534,7 +534,7 @@ body {
 }
 
 .carousel-inner {
-  background-color: black;
+  background-color: transparent;
   box-shadow: 3px 3px 18px;
   height: auto;
   width: 100%;
@@ -556,7 +556,6 @@ body {
   .carousel-inner {
     height: 800px;
     width: 100%;
-    margin-left: 0;
   }
 }
 @media (min-width: 1280px) {
@@ -577,8 +576,8 @@ body {
 }
 @media (min-width: 1115px) {
   .banner {
-    width: 70rem;
-    height: 45rem;
+    width: 40rem;
+    height: 30rem;
   }
 }
 
@@ -637,10 +636,11 @@ body {
 }
 .products-container__titulo {
   text-transform: uppercase;
-  margin-top: 15px;
-  color: hsl(346deg, 93%, 54%);
-  font-size: 1.3em;
-  font-weight: 550;
+  margin-top: 1px;
+  color: black;
+  text-shadow: 0.9px 1.3px 0px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  text-align: center;
 }
 .products-container__imagen {
   width: 100%;
