@@ -3,8 +3,20 @@
 
 
 .carousel-container{
-    
     text-align: center;
+    @media (min-width: 750px){
+        //border:5px solid green;
+        width:40rem;
+        height:37rem;
+        margin-left:-7rem;
+    }    
+    @media (min-width: 1280px){
+        margin-left:15rem;
+        @media (max-height: 768px){
+            width:40rem;
+            height:30rem;
+        }
+    }    
     
 }
 .carousel-control-prev, .carousel-control-next{
@@ -13,13 +25,13 @@
 .carousel-inner{
     //border:1px solid red;
     background-color:transparent;
-    box-shadow: 3px 3px 18px;
+    //box-shadow: 3px 3px 18px;
     height:auto;
     width:100%;
-    @media (min-width: 800px){
+    @media (min-width: 750px){
         height:40rem;
-        width:50rem;
-        margin-left:-13rem;
+        width:40rem;
+        //margin-left:-13rem;
     }
     @media (min-width: 1115px){
         height:600px;
@@ -29,14 +41,18 @@
     }
     @media (min-width: 1280px){
         height:auto;
+        @media (max-height: 768px){
+            width:40rem;
+            height:30rem;
+        }
         
     } 
 }
 .banner{                //IMÁGENES DEL CARRUSEL
     height:300px;
-    
-    @media (min-width: 800px){
-        width:45rem;
+    width:100%;
+    @media (min-width: 750px){
+        width:39.5rem;
         height:auto;
     }
     @media (min-width: 1115px){
@@ -44,10 +60,10 @@
         //height: auto;
     }
     @media (min-width: 1280px){
-        width:70rem;
-        height:40rem;
+        width:40;
+        height:36.5rem;
         @media (max-height: 768px){
-            width:50rem;
+            width:40rem;
             height:30rem;
         }
     }
