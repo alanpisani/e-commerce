@@ -373,6 +373,7 @@ console.log(tresProductos);
 
 
 //MOSTRAR EN PANTALLA LOS 3 PRODUCTOS ALEATORIOS
+
 const contenedorTresProductos = document.querySelector(".products-container__just-products");
 contenedorTresProductos.innerHTML = "";
 

@@ -543,26 +543,20 @@ body {
 @media (min-width: 800px) {
   .carousel-inner {
     height: 40rem;
-    width: 45rem;
-    margin-left: -10rem;
-  }
-}
-@media (min-width: 1110px) {
-  .carousel-inner {
-    height: 50rem;
-    width: 100%;
+    width: 50rem;
+    margin-left: -13rem;
   }
 }
 @media (min-width: 1115px) {
   .carousel-inner {
-    height: 800px;
+    height: 600px;
     width: 100%;
+    margin-left: 0;
   }
 }
 @media (min-width: 1280px) {
   .carousel-inner {
     height: auto;
-    margin-left: 0;
   }
 }
 
@@ -577,8 +571,13 @@ body {
 }
 @media (min-width: 1115px) {
   .banner {
-    width: 40rem;
-    height: 30rem;
+    width: 41em;
+  }
+}
+@media (min-width: 1280px) {
+  .banner {
+    width: 70rem;
+    height: 40rem;
   }
 }
 
