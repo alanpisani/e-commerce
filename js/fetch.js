@@ -244,7 +244,7 @@ const productosArray = [
             nombre: "Tazas",
             id: "tazas"
         },
-        precio: 2000
+        precio: 3000
     },
     {
         id: "taza-03",
@@ -312,7 +312,7 @@ const productosArray = [
             nombre: "Llaveros",
             id: "llaveros"
         },
-        precio: 500
+        precio: 1000
     },
     {
         id: "llavero-04",
@@ -323,7 +323,7 @@ const productosArray = [
             nombre: "Llaveros",
             id: "llaveros"
         },
-        precio: 500
+        precio: 1000
     },
     
     
@@ -351,8 +351,19 @@ const productosArray = [
         },
         precio: 1600
     },
-     {
+    {
         id: "variado-03",
+        titulo: "Soporte celular Pies",
+        imagen: "./imagenes/fotos-ventas/soportes/pies/soporte-01.jpg",
+        imagen2: "./imagenes/fotos-ventas/soportes/pies/soporte-02.jpg",
+        categoria: {
+            nombre: "Variados",
+            id: "variados"
+        },
+        precio: 1600
+    },
+     {
+        id: "variado-04",
         titulo: "Funko Lio Messi",
         imagen: "./imagenes/fotos-ventas/funkos/futbol/messi/funko-01.png",
         imagen2: "./imagenes/fotos-ventas/funkos/futbol/messi/funko-02.png",

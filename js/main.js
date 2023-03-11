@@ -125,6 +125,8 @@ const addToCartBtn = document.querySelector(".details__button");
 let cartNotification = document.querySelector(".header__cart--notification");
 let lastValue = parseInt(cartNotification.innerText);
 
+const numeron = document.querySelector('#numeron');
+
 addToCartBtn.addEventListener("click", () => {
   lastValue = lastValue + userInputNumber;
   productoEnPagina.cantidad = lastValue;
@@ -138,8 +140,12 @@ addToCartBtn.addEventListener("click", () => {
     <div class="cart-modal__checkout-container">
         <p class="cart-empty">Tu carrito está vacío</p>
     </div>`;
+
+    
+
   }else{
     drawProductInModal();
+    
   };
   
 
@@ -181,6 +187,8 @@ function deleteProduct() {
     //localStorage.removeItem('productos-en-carrito', productoEnPagina);
     productosEnCarrito.pop();
     console.log(productosEnCarrito);
+
+    numeron.style.opacity = 0;
   });
 }
 
@@ -321,7 +329,9 @@ divCarrito.classList.add("cart-modal");
     </div>`;
     carritoModal.append(divCarrito);
     deleteProduct();
-    enviarAlCarrito()
+    enviarAlCarrito();
+
+    numeron.style.opacity = 1;
 
     let priceModal = document.querySelector(".cart-modal__price");
     priceModal.innerHTML = `$${productoEnPagina.precio} x ${lastValue} <span>$${lastValue * productoEnPagina.precio}</span>`;

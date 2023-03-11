@@ -337,19 +337,20 @@ const productosArray = [
          },
          precio: 1600
      },
-     {
-        id: "variado-02",
-        titulo: "Lapicero Eevee",
-        imagen: "./imagenes/fotos-ventas/lapiceros/eevee/lapicero-01.png",
-        imagen2: "./imagenes/fotos-ventas/lapiceros/eevee/lapicero-02.png",
-        categoria: {
-            nombre: "Variados",
-            id: "variados"
+        {
+            id: "variado-03",
+            titulo: "Soporte celular Pies",
+            imagen: "./imagenes/fotos-ventas/soportes/pies/soporte-01.jpg",
+            imagen2: "./imagenes/fotos-ventas/soportes/pies/soporte-02.jpg",
+            categoria: {
+                nombre: "Variados",
+                id: "variados"
+            },
+            precio: 1600
         },
-        precio: 1600
-    },
+    
      {
-        id: "variado-03",
+        id: "variado-04",
         titulo: "Funko Lio Messi",
         imagen: "./imagenes/fotos-ventas/funkos/futbol/messi/funko-01.png",
         imagen2: "./imagenes/fotos-ventas/funkos/futbol/messi/funko-02.png",
